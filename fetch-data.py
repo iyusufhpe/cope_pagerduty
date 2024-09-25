@@ -1,3 +1,22 @@
+'''
+This module fetches PagerDuty incidents data for a given month, year, or date range.
+It paginates through the results and saves the combined data to JSON and CSV files.
+
+Usage:  python main.py --month 1 --year 2024
+        python main.py --last_n_months 3
+        python main.py --start_date 04/23/2024 --end_date 04/24/2024
+        
+Note: The script respects the rate limit by waiting for 5 seconds between each request.
+
+TODO: Schedule the script to run daily using a cron job. Make sure to use valid data time inputs.
+TODO: Make this module a part of a larger ETL pipeline to fetch, transform, and load data into a database.
+
+TODO: Add error handling for invalid date inputs.
+TODO: Add a function to validate the date format.
+TODO: Add a function to handle the response status code.
+TODO: Add a function to reorder columns in the DataFrame.
+
+'''
 import requests
 import json
 import time
