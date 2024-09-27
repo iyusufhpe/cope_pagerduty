@@ -45,4 +45,9 @@ if __name__ == '__main__':
     # convert_all_json_to_parquet('data-samples', 'parquet-output')
 
     # Command: any file with .json extension and name starts with 'incident' will be converted to one combined Parquet file
-    convert_incident_json_to_combined_parquet('data/json-files', 'combined_incidents.parquet')
+    # convert_incident_json_to_combined_parquet('data/json-files', 'data/combined_incidents.parquet')
+        # Command: any file with .json extension and name starts with 'incident' will be converted to one combined Parquet file
+    convert_incident_json_to_combined_parquet(
+        r'C:\Users\yusufi\OneDrive - Hewlett Packard Enterprise\SHARED_ONEDRIVE_HPEIY\data\json-files',
+        r'C:\Users\yusufi\OneDrive - Hewlett Packard Enterprise\SHARED_ONEDRIVE_HPEIY\data\combined_incidents.parquet'
+    )
