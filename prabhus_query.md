@@ -13,7 +13,7 @@ D create table incidents_aug23 as select * from "incidents_2024-09-01_to_2024-09
 D create table incidents_aug23 as select * from "incidents_2024-09-01_to_2024-09-30.json";
 ```
 
-- **Note:** I've just noticed that I made a mistake with the table name. Instead of 24 I used 23 to name it incidents_aug23
+- **Note:** I've just noticed that I made a mistake with the table name. Instead of Oct24 I used 23 to name it incidents_aug23
 
 - Describe table incidents_aug23 and save it as a text
 
