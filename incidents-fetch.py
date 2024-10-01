@@ -124,9 +124,9 @@ def main():
 
 '''
     Usage:
-    python main.py --month 1 --year 2024  # Fetch data for January 2024
-    python main.py --last_n_months 3  # Fetch data for the last three months from today
-    python main.py --start_date 04/23/2024 --end_date 04/24/2024  # Fetch data for a specific date range
+    python incidents-fetcc.py --month 1 --year 2024  # Fetch data for January 2024
+    python incidents-fetcc.py --last_n_months 3  # Fetch data for the last three months from today
+    python incidents-fetcc.py --start_date 09/01/2024 --end_date 09/30/2024  # Fetch data for a specific date range
 '''
 if __name__ == "__main__":
     main()

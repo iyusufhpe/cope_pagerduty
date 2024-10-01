@@ -56,3 +56,45 @@ D SELECT MIN(created_at) as max_date from incidents2;
 │ 2023-09-01 00:03:27 │
 └─────────────────────┘
 ```
+
+
+## Incidents greater then August 1st 2024
+```sql
+select count(*) from incidents2;
+select count(*) from incidents2 where created_at > '2024-08-01 00:00:00';
+
+D select count(*) from incidents2;
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│       259639 │
+└──────────────┘
+D
+D select count(*) from incidents2 where created_at > '2024-08-01 00:00:00';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│        26940 │
+└──────────────┘
+``` 
+
+
+## Create a table with just incident id for August 2024
+
+```sql
+CREATE TABLE AUG24_INCIDENTS AS
+SELECT ID FROM INCIDENTS2 
+WHERE CREATED_AT > '2024-08-01 00:00:00' 
+AND 
+CREATED_AT < '2024-09-01 00:00:00';
+```
+
+-- Let us output the coount of 
+
+<DataTable data={query_name}>
+    <Column id=column_name fmt=usd/>
+    <Column id=column_name contentType=link align=center/>
+</DataTable>
+
