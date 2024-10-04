@@ -1,3 +1,4 @@
+import os
 import time
 import json
 from pdpyras import APISession
@@ -57,15 +58,25 @@ def save_to_file_bulk(alerts_data, filename):
         print(f"Error writing to file {filename}: {e}")
 
 def read_incident_ids_from_csv(csv_file_path):
+    if not os.path.exists(csv_file_path):
+        raise FileNotFoundError(f"The file {csv_file_path} does not exist.")
+    
     incident_ids = []
-    with open(csv_file_path, mode='r') as file:
-        csv_reader = csv.reader(file)
-        for row in csv_reader:
-            incident_ids.append(row[0])  # Assuming incident IDs are in the first column
+    try:
+        with open(csv_file_path, mode='r') as file:
+            csv_reader = csv.reader(file)
+            for row in csv_reader:
+                if row:  # Check if the row is not empty
+                    incident_ids.append(row[0])  # Assuming incident IDs are in the first column
+    except Exception as e:
+        print(f"An error occurred while reading the CSV file: {e}")
+    
     return incident_ids
 
 if __name__ == '__main__':
-    csv_input_incidents_ids = '/home/iyusuf/projects/data_pagerduty/incidents_id_september2024.csv'
-    incident_alerts_json = '/home/iyusuf/projects/data_pagerduty/incident_alerts_september2024.json'
+    # csv_input_incidents_ids = '/home/iyusuf/projects/data_pagerduty/id_incidents_test.csv' # uncomment to test
+    # print(read_incident_ids_from_csv(csv_input_incidents_ids)) # unocmment to test
+    csv_input_incidents_ids = '/home/iyusuf/projects/data_pagerduty/ids-augsep24.csv'
+    incident_alerts_json = '/home/iyusuf/projects/data_pagerduty/alerts_augsep24.json'
     incident_ids = read_incident_ids_from_csv(csv_input_incidents_ids)
     batch_download(incident_ids, incident_alerts_json)
