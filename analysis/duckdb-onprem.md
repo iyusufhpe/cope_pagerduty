@@ -269,3 +269,95 @@ FROM incidents;
 └─────────────────────────────┘
 ```
 
+## Time related
+### How many incidents is Auto Resolved
+
+```sql
+select count(*) from incidents
+where auto_resolved is TRUE
+
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│       124744 │
+└──────────────┘
+;
+
+
+### Priority analysis
+
+```SQL
+select count(*) from incidents where priority_name LIKE 'P1';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│        11563 │
+└──────────────┘
+select count(*) from incidents where priority_name LIKE 'P2';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│         7669 │
+└──────────────┘
+select count(*) from incidents where priority_name LIKE 'P3';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│        46652 │
+└──────────────┘
+select count(*) from incidents where priority_name LIKE 'P4';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│        39911 │
+└──────────────┘
+D select count(*) from incidents where priority_name LIKE '';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│            0 │
+└──────────────┘
+D select count(*) from incidents where priority_name IS NULL;
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│       157013 │
+└──────────────┘
+```
+
+
+## Teams and Services
+### How many teams are contributing to PagerDuty
+```sql
+select distinct(team_name) from incidents;
+
+├────────────────────────────┤
+│     68 rows (40 shown)     │
+└────────────────────────────┘
+```
+
+### How many services are contributing to PagerDuty Incidents
+```sql
+ select distinct(service_name) from incidents;
+
+├───────────────────────────────────────────────┤
+│              671 rows (40 shown)              │
+└───────────────────────────────────────────────┘
+```
+
+### Find On-Prem Teams and Services
+```sql
+SELECT distinct(service_name) FROM incidents
+WHERE description ILIKE '%Domain Name%'
+
+├──────────────────────────────────────────────────────┤
+│                       41 rows                        │
+└──────────────────────────────────────────────────────┘
+;
