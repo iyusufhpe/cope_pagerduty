@@ -65,7 +65,7 @@ def read_incident_ids_from_csv(csv_file_path):
     return incident_ids
 
 if __name__ == '__main__':
-    csv_input_incidents_ids = 'C:\\Users\\yusufi\\OneDrive - Hewlett Packard Enterprise\\SHARED_ONEDRIVE_HPEIY\\pagerduty\\incidents_ids_tester.csv'
-    incident_alerts_json = 'C:\\Users\\yusufi\\OneDrive - Hewlett Packard Enterprise\\SHARED_ONEDRIVE_HPEIY\\pagerduty\\incidents_alerts_tester.json'
+    csv_input_incidents_ids = '/home/iyusuf/projects/data_pagerduty/incidents_id_september2024.csv'
+    incident_alerts_json = '/home/iyusuf/projects/data_pagerduty/incident_alerts_september2024.json'
     incident_ids = read_incident_ids_from_csv(csv_input_incidents_ids)
     batch_download(incident_ids, incident_alerts_json)
