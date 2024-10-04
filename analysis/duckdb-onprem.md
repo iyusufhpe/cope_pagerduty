@@ -352,12 +352,20 @@ select distinct(team_name) from incidents;
 └───────────────────────────────────────────────┘
 ```
 
-### Find On-Prem Teams and Services
+### Find On-Prem Services
 ```sql
 SELECT distinct(service_name) FROM incidents
 WHERE description ILIKE '%Domain Name%'
+;
 
 ├──────────────────────────────────────────────────────┤
 │                       41 rows                        │
 └──────────────────────────────────────────────────────┘
+```
+
+### Find Team Names for onprem.
+```sql
+SELECT distinct(team_name) FROM incidents
+WHERE description ILIKE '%Domain Name%'
 ;
+```
