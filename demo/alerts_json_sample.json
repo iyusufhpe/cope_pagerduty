@@ -1,0 +1,1157 @@
+[{
+    "id": "Q30ZLCGAB0NKTI",
+    "type": "alert",
+    "summary": "[FIRING:1] OOMRestarts gateway (neso production hpe-hcss monitoring/k8s pcaas-colo-demo-rda-delegate-7dc49cc7c5-fjj4g us-west-2 warning)",
+    "self": "https://api.pagerduty.com/alerts/Q30ZLCGAB0NKTI",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q30ZLCGAB0NKTI",
+    "created_at": "2024-09-20T18:05:02-06:00",
+    "status": "resolved",
+    "resolved_at": "2024-09-20T19:05:02-06:00",
+    "alert_key": "f0dafdbb2aefc02f584b37cf993019eb8c14cda7ce883e3e44c1a5cf15e5978b",
+    "suppressed": false,
+    "service": {
+        "id": "P1WCQ2J",
+        "type": "service_reference",
+        "summary": "neso-gateway",
+        "self": "https://api.pagerduty.com/services/P1WCQ2J",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/P1WCQ2J"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q2JIOSNX5TZRDF",
+        "type": "incident_reference",
+        "summary": "[#621632] [FIRING:1] OOMRestarts gateway (neso production hpe-hcss monitoring/k8s pcaas-colo-demo-rda-delegate-7dc49cc7c5-fjj4g us-west-2 warning)",
+        "self": "https://api.pagerduty.com/incidents/Q2JIOSNX5TZRDF",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q2JIOSNX5TZRDF"
+    },
+    "first_trigger_log_entry": {
+        "id": "R1MCRND039IJ2HB5AZ3YQHBC2V",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R1MCRND039IJ2HB5AZ3YQHBC2V",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q30ZLCGAB0NKTI/log_entries/R1MCRND039IJ2HB5AZ3YQHBC2V"
+    },
+    "body": {
+        "contexts": [],
+        "details": {
+            "firing": "Labels:\n - alertname = OOMRestarts\n - cluster = neso\n - environment = production\n - namespace = gateway\n - org = hpe-hcss\n - origin_prometheus = monitoring/k8s\n - pod = pcaas-colo-demo-rda-delegate-7dc49cc7c5-fjj4g\n - region = us-west-2\n - severity = warning\nAnnotations:\n - message = Pod gateway/pcaas-colo-demo-rda-delegate-7dc49cc7c5-fjj4g was OOM killed in last hour\n - runbook_url = https://github.com/hpe-sre/dev-docs/blob/main/docs/runbooks/hpehcss-readme-runbooks/redstone-alert-runbook.md#oomrestarts\nSource: https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/graph?g0.expr=sum+by+%28namespace%2C+pod%29+%28max_over_time%28kube_pod_container_status_last_terminated_reason%7Breason%3D%22OOMKilled%22%7D%5B1h%5D%29%29+%3E+0+and+sum+by+%28namespace%2C+pod%29+%28increase%28kube_pod_container_status_restarts_total%5B1h%5D%29%29+%3E+0&g0.tab=1\n",
+            "num_firing": "1",
+            "num_resolved": "0",
+            "resolved": ""
+        },
+        "cef_details": {
+            "client": "alertmanager-neso",
+            "client_url": "https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/alerts",
+            "contexts": [],
+            "dedup_key": "f0dafdbb2aefc02f584b37cf993019eb8c14cda7ce883e3e44c1a5cf15e5978b",
+            "description": "[FIRING:1] OOMRestarts gateway (neso production hpe-hcss monitoring/k8s pcaas-colo-demo-rda-delegate-7dc49cc7c5-fjj4g us-west-2 warning)",
+            "details": {
+                "firing": "Labels:\n - alertname = OOMRestarts\n - cluster = neso\n - environment = production\n - namespace = gateway\n - org = hpe-hcss\n - origin_prometheus = monitoring/k8s\n - pod = pcaas-colo-demo-rda-delegate-7dc49cc7c5-fjj4g\n - region = us-west-2\n - severity = warning\nAnnotations:\n - message = Pod gateway/pcaas-colo-demo-rda-delegate-7dc49cc7c5-fjj4g was OOM killed in last hour\n - runbook_url = https://github.com/hpe-sre/dev-docs/blob/main/docs/runbooks/hpehcss-readme-runbooks/redstone-alert-runbook.md#oomrestarts\nSource: https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/graph?g0.expr=sum+by+%28namespace%2C+pod%29+%28max_over_time%28kube_pod_container_status_last_terminated_reason%7Breason%3D%22OOMKilled%22%7D%5B1h%5D%29%29+%3E+0+and+sum+by+%28namespace%2C+pod%29+%28increase%28kube_pod_container_status_restarts_total%5B1h%5D%29%29+%3E+0&g0.tab=1\n",
+                "num_firing": "1",
+                "num_resolved": "0",
+                "resolved": ""
+            },
+            "severity": "warning",
+            "source_origin": "alertmanager-neso"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q0NTT08YQ5T5LG",
+    "type": "alert",
+    "summary": "[FIRING:2] OOMRestarts agena (neso production hpe-hcss monitoring/k8s us-west-2 warning)",
+    "self": "https://api.pagerduty.com/alerts/Q0NTT08YQ5T5LG",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q0NTT08YQ5T5LG",
+    "created_at": "2024-09-20T18:05:03-06:00",
+    "status": "resolved",
+    "resolved_at": "2024-09-20T19:04:17-06:00",
+    "alert_key": "c4545db13d979757e37cc78ec54786cfb252c6142225400f708eca0f8808acf7",
+    "suppressed": false,
+    "service": {
+        "id": "P55LSIA",
+        "type": "service_reference",
+        "summary": "neso-agena",
+        "self": "https://api.pagerduty.com/services/P55LSIA",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/P55LSIA"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q0MJSMOCSQVX9I",
+        "type": "incident_reference",
+        "summary": "[#621633] [FIRING:2] OOMRestarts agena (neso production hpe-hcss monitoring/k8s us-west-2 warning)",
+        "self": "https://api.pagerduty.com/incidents/Q0MJSMOCSQVX9I",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q0MJSMOCSQVX9I"
+    },
+    "first_trigger_log_entry": {
+        "id": "R3EFQPACFJMAVVJU9G2YT5176H",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R3EFQPACFJMAVVJU9G2YT5176H",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q0NTT08YQ5T5LG/log_entries/R3EFQPACFJMAVVJU9G2YT5176H"
+    },
+    "body": {
+        "contexts": [],
+        "details": {
+            "firing": "Labels:\n - alertname = OOMRestarts\n - cluster = neso\n - environment = production\n - namespace = agena\n - org = hpe-hcss\n - origin_prometheus = monitoring/k8s\n - pod = vmaas-collector-6ddf5fb757-n5s42\n - region = us-west-2\n - severity = warning\nAnnotations:\n - message = Pod agena/vmaas-collector-6ddf5fb757-n5s42 was OOM killed in last hour\n - runbook_url = https://github.com/hpe-sre/dev-docs/blob/main/docs/runbooks/hpehcss-readme-runbooks/redstone-alert-runbook.md#oomrestarts\nSource: https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/graph?g0.expr=sum+by+%28namespace%2C+pod%29+%28max_over_time%28kube_pod_container_status_last_terminated_reason%7Breason%3D%22OOMKilled%22%7D%5B1h%5D%29%29+%3E+0+and+sum+by+%28namespace%2C+pod%29+%28increase%28kube_pod_container_status_restarts_total%5B1h%5D%29%29+%3E+0&g0.tab=1\nLabels:\n - alertname = OOMRestarts\n - cluster = neso\n - environment = production\n - namespace = agena\n - org = hpe-hcss\n - origin_prometheus = monitoring/k8s\n - pod = vmaas-collector-6ddf5fb757-rfzt7\n - region = us-west-2\n - severity = warning\nAnnotations:\n - message = Pod agena/vmaas-collector-6ddf5fb757-rfzt7 was OOM killed in last hour\n - runbook_url = https://github.com/hpe-sre/dev-docs/blob/main/docs/runbooks/hpehcss-readme-runbooks/redstone-alert-runbook.md#oomrestarts\nSource: https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/graph?g0.expr=sum+by+%28namespace%2C+pod%29+%28max_over_time%28kube_pod_container_status_last_terminated_reason%7Breason%3D%22OOMKilled%22%7D%5B1h%5D%29%29+%3E+0+and+sum+by+%28namespace%2C+pod%29+%28increase%28kube_pod_container_status_restarts_total%5B1h%5D%29%29+%3E+0&g0.tab=1\n",
+            "num_firing": "2",
+            "num_resolved": "0",
+            "resolved": ""
+        },
+        "cef_details": {
+            "client": "alertmanager-neso",
+            "client_url": "https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/alerts",
+            "contexts": [],
+            "dedup_key": "c4545db13d979757e37cc78ec54786cfb252c6142225400f708eca0f8808acf7",
+            "description": "[FIRING:2] OOMRestarts agena (neso production hpe-hcss monitoring/k8s us-west-2 warning)",
+            "details": {
+                "firing": "Labels:\n - alertname = OOMRestarts\n - cluster = neso\n - environment = production\n - namespace = agena\n - org = hpe-hcss\n - origin_prometheus = monitoring/k8s\n - pod = vmaas-collector-6ddf5fb757-n5s42\n - region = us-west-2\n - severity = warning\nAnnotations:\n - message = Pod agena/vmaas-collector-6ddf5fb757-n5s42 was OOM killed in last hour\n - runbook_url = https://github.com/hpe-sre/dev-docs/blob/main/docs/runbooks/hpehcss-readme-runbooks/redstone-alert-runbook.md#oomrestarts\nSource: https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/graph?g0.expr=sum+by+%28namespace%2C+pod%29+%28max_over_time%28kube_pod_container_status_last_terminated_reason%7Breason%3D%22OOMKilled%22%7D%5B1h%5D%29%29+%3E+0+and+sum+by+%28namespace%2C+pod%29+%28increase%28kube_pod_container_status_restarts_total%5B1h%5D%29%29+%3E+0&g0.tab=1\nLabels:\n - alertname = OOMRestarts\n - cluster = neso\n - environment = production\n - namespace = agena\n - org = hpe-hcss\n - origin_prometheus = monitoring/k8s\n - pod = vmaas-collector-6ddf5fb757-rfzt7\n - region = us-west-2\n - severity = warning\nAnnotations:\n - message = Pod agena/vmaas-collector-6ddf5fb757-rfzt7 was OOM killed in last hour\n - runbook_url = https://github.com/hpe-sre/dev-docs/blob/main/docs/runbooks/hpehcss-readme-runbooks/redstone-alert-runbook.md#oomrestarts\nSource: https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/graph?g0.expr=sum+by+%28namespace%2C+pod%29+%28max_over_time%28kube_pod_container_status_last_terminated_reason%7Breason%3D%22OOMKilled%22%7D%5B1h%5D%29%29+%3E+0+and+sum+by+%28namespace%2C+pod%29+%28increase%28kube_pod_container_status_restarts_total%5B1h%5D%29%29+%3E+0&g0.tab=1\n",
+                "num_firing": "2",
+                "num_resolved": "0",
+                "resolved": ""
+            },
+            "severity": "warning",
+            "source_origin": "alertmanager-neso"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q1NHO14YO3VHOS",
+    "type": "alert",
+    "summary": "MLOps-metering-cron-failure",
+    "self": "https://api.pagerduty.com/alerts/Q1NHO14YO3VHOS",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q1NHO14YO3VHOS",
+    "created_at": "2024-09-20T18:10:03-06:00",
+    "status": "triggered",
+    "resolved_at": null,
+    "alert_key": "b32d813e422840d9aff5c8839edd1a79",
+    "suppressed": false,
+    "service": {
+        "id": "PXYFPHV",
+        "type": "service_reference",
+        "summary": "oberonlogz-mlops",
+        "self": "https://api.pagerduty.com/services/PXYFPHV",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/PXYFPHV"
+    },
+    "severity": "critical",
+    "incident": {
+        "id": "Q1O1WSV6RAFJ80",
+        "type": "incident_reference",
+        "summary": "[#621634] MLOps-metering-cron-failure",
+        "self": "https://api.pagerduty.com/incidents/Q1O1WSV6RAFJ80",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q1O1WSV6RAFJ80"
+    },
+    "first_trigger_log_entry": {
+        "id": "R8LWIWE8J6J77YENSNW8OECGW7",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R8LWIWE8J6J77YENSNW8OECGW7",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q1NHO14YO3VHOS/log_entries/R8LWIWE8J6J77YENSNW8OECGW7"
+    },
+    "body": {
+        "contexts": [
+            {
+                "type": "image",
+                "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png"
+            }
+        ],
+        "details": {
+            "Description": "Error in MLOps metering cron logs indicating a failure in initiating metering cycle.",
+            "Samples": "Sample 1 event out of 1:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-metering-cron-28781285-fbfdx\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"531d3b94-0ea0-42c2-9a2f-120302c6b399\",\n    \"labels\" : {\n      \"controller-uid\" : \"3d5dff36-1490-4cc9-a800-ae845640da7f\",\n      \"job-name\" : \"mlops-metering-cron-28781285\"\n    },\n    \"host\" : \"ip-192-168-98-182.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api-cron\",\n    \"docker_id\" : \"31e285c83f027b6c0dd6ecdb48852d9af15b0a441ef12f3c84b4058a10d9cb82\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:7f232fa4a5057c650fc1c844f6d6222df40efd15cf532a755d0e9fbb4f30c6b3\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.45-cron\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1565344994,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:05:54.531Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/pkg/cron/cron_service.go:58\\\",\\\"msg\\\":\\\"Metering Cron Failure: Error while fetching tenants from manager: Err: Failed to execute specified method, after 5 attempts\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.mlops-metering-cron-28781285-fbfdx.metering-api-cron\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:05:54.531+00:00\",\n  \"LogSize\" : 1707,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:05:54.531Z, context=/hpe-hcss/mlops-metering/internal/pkg/cron/cron_service.go:58, msg=Metering Cron Failure: Error while fetching tenants from manager: Err: Failed to execute specified method, after 5 attempts, requestID=, tenantID=, userID=, type=log}\"\n} ]",
+            "Severity": "Severe"
+        },
+        "cef_details": {
+            "client": "Logz.io Alerts",
+            "client_url": "https://app.logz.io#/dashboard/alerts/triggered?switchToAccountId=93597",
+            "contexts": [
+                {
+                    "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png",
+                    "type": "image"
+                }
+            ],
+            "dedup_key": "b32d813e422840d9aff5c8839edd1a79",
+            "description": "MLOps-metering-cron-failure",
+            "details": {
+                "Description": "Error in MLOps metering cron logs indicating a failure in initiating metering cycle.",
+                "Samples": "Sample 1 event out of 1:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-metering-cron-28781285-fbfdx\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"531d3b94-0ea0-42c2-9a2f-120302c6b399\",\n    \"labels\" : {\n      \"controller-uid\" : \"3d5dff36-1490-4cc9-a800-ae845640da7f\",\n      \"job-name\" : \"mlops-metering-cron-28781285\"\n    },\n    \"host\" : \"ip-192-168-98-182.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api-cron\",\n    \"docker_id\" : \"31e285c83f027b6c0dd6ecdb48852d9af15b0a441ef12f3c84b4058a10d9cb82\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:7f232fa4a5057c650fc1c844f6d6222df40efd15cf532a755d0e9fbb4f30c6b3\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.45-cron\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1565344994,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:05:54.531Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/pkg/cron/cron_service.go:58\\\",\\\"msg\\\":\\\"Metering Cron Failure: Error while fetching tenants from manager: Err: Failed to execute specified method, after 5 attempts\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.mlops-metering-cron-28781285-fbfdx.metering-api-cron\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:05:54.531+00:00\",\n  \"LogSize\" : 1707,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:05:54.531Z, context=/hpe-hcss/mlops-metering/internal/pkg/cron/cron_service.go:58, msg=Metering Cron Failure: Error while fetching tenants from manager: Err: Failed to execute specified method, after 5 attempts, requestID=, tenantID=, userID=, type=log}\"\n} ]",
+                "Severity": "Severe"
+            },
+            "message": "MLOps-metering-cron-failure",
+            "severity": "critical"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q1JSBSG7XTYQ8Z",
+    "type": "alert",
+    "summary": "MLOps-metering-scheduler-failure",
+    "self": "https://api.pagerduty.com/alerts/Q1JSBSG7XTYQ8Z",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q1JSBSG7XTYQ8Z",
+    "created_at": "2024-09-20T18:11:18-06:00",
+    "status": "resolved",
+    "resolved_at": "2024-09-20T23:20:41-06:00",
+    "alert_key": "05cac03f1ba04581be983bcdb5fe27c0",
+    "suppressed": false,
+    "service": {
+        "id": "PCLRF85",
+        "type": "service_reference",
+        "summary": "nesologz-mlops",
+        "self": "https://api.pagerduty.com/services/PCLRF85",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/PCLRF85"
+    },
+    "severity": "critical",
+    "incident": {
+        "id": "Q3UHI8ILCZWQUP",
+        "type": "incident_reference",
+        "summary": "[#621635] MLOps-metering-scheduler-failure",
+        "self": "https://api.pagerduty.com/incidents/Q3UHI8ILCZWQUP",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q3UHI8ILCZWQUP"
+    },
+    "first_trigger_log_entry": {
+        "id": "RND0JDA12V7ARL6B1Y8ZBNCSD1",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/RND0JDA12V7ARL6B1Y8ZBNCSD1",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q1JSBSG7XTYQ8Z/log_entries/RND0JDA12V7ARL6B1Y8ZBNCSD1"
+    },
+    "body": {
+        "contexts": [
+            {
+                "type": "image",
+                "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png"
+            }
+        ],
+        "details": {
+            "Description": "Error in MLOps metering scheduler logs indicating a failure in scheduling a Job for a Service Instance.",
+            "Samples": "Sample 1 event out of 1:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"metering-api-metering-api-cc5b5cf45-b46m8\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"78d957f4-ccb7-4f0f-aa57-3d5e601117a5\",\n    \"labels\" : {\n      \"app\" : \"metering-api\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"cc5b5cf45\",\n      \"release\" : \"metering-api\"\n    },\n    \"annotations\" : {\n      \"prometheus_io/path\" : \"/metrics\",\n      \"prometheus_io/port\" : \"10290\",\n      \"prometheus_io/scrape\" : \"true\",\n      \"wave_pusher_com/config-hash\" : \"33dedbf85774b81e3ab7b195e2af4e6a2c8214a0d8962ac0fafdc53a8081fea2\"\n    },\n    \"host\" : \"ip-192-168-142-201.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api\",\n    \"docker_id\" : \"99395ecf9ec867071d6d1a2a55a767aadcb826a07b52f330fa51345df56939d9\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:d60782f495fe831c5c1bf3a5184a294e5facd5972d6b860f4c01b9dc3e28dfec\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.44\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 828288475,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:07:37.204Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/pkg/dispatcher/sequential/dispatcher.go:100\\\",\\\"msg\\\":\\\"Metering Scheduler Failure: Retries were exhausted for fetching job status for the job with name: %+v for service Instance %v. Err:%+v3c9f026f-7713-434f-9514-e96ce6925bb0-cpu-2024-09-203c9f026f-7713-434f-9514-e96ce6925bb0Failed to execute specified method, after 3 attempts\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.metering-api-metering-api-cc5b5cf45-b46m8.metering-api\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:07:37.204+00:00\",\n  \"LogSize\" : 2146,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:07:37.204Z\",\n    \"context\" : \"/hpe-hcss/mlops-metering/internal/pkg/dispatcher/sequential/dispatcher.go:100\",\n    \"msg\" : \"Metering Scheduler Failure: Retries were exhausted for fetching job status for the job with name: %+v for service Instance %v. Err:%+v3c9f026f-7713-434f-9514-e96ce6925bb0-cpu-2024-09-203c9f026f-7713-434f-9514-e96ce6925bb0Failed to execute specified method, after 3 attempts\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\"\n  }\n} ]",
+            "Severity": "Severe"
+        },
+        "cef_details": {
+            "client": "Logz.io Alerts",
+            "client_url": "https://app.logz.io#/dashboard/alerts/triggered?switchToAccountId=89316",
+            "contexts": [
+                {
+                    "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png",
+                    "type": "image"
+                }
+            ],
+            "dedup_key": "05cac03f1ba04581be983bcdb5fe27c0",
+            "description": "MLOps-metering-scheduler-failure",
+            "details": {
+                "Description": "Error in MLOps metering scheduler logs indicating a failure in scheduling a Job for a Service Instance.",
+                "Samples": "Sample 1 event out of 1:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"metering-api-metering-api-cc5b5cf45-b46m8\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"78d957f4-ccb7-4f0f-aa57-3d5e601117a5\",\n    \"labels\" : {\n      \"app\" : \"metering-api\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"cc5b5cf45\",\n      \"release\" : \"metering-api\"\n    },\n    \"annotations\" : {\n      \"prometheus_io/path\" : \"/metrics\",\n      \"prometheus_io/port\" : \"10290\",\n      \"prometheus_io/scrape\" : \"true\",\n      \"wave_pusher_com/config-hash\" : \"33dedbf85774b81e3ab7b195e2af4e6a2c8214a0d8962ac0fafdc53a8081fea2\"\n    },\n    \"host\" : \"ip-192-168-142-201.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api\",\n    \"docker_id\" : \"99395ecf9ec867071d6d1a2a55a767aadcb826a07b52f330fa51345df56939d9\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:d60782f495fe831c5c1bf3a5184a294e5facd5972d6b860f4c01b9dc3e28dfec\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.44\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 828288475,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:07:37.204Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/pkg/dispatcher/sequential/dispatcher.go:100\\\",\\\"msg\\\":\\\"Metering Scheduler Failure: Retries were exhausted for fetching job status for the job with name: %+v for service Instance %v. Err:%+v3c9f026f-7713-434f-9514-e96ce6925bb0-cpu-2024-09-203c9f026f-7713-434f-9514-e96ce6925bb0Failed to execute specified method, after 3 attempts\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.metering-api-metering-api-cc5b5cf45-b46m8.metering-api\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:07:37.204+00:00\",\n  \"LogSize\" : 2146,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:07:37.204Z\",\n    \"context\" : \"/hpe-hcss/mlops-metering/internal/pkg/dispatcher/sequential/dispatcher.go:100\",\n    \"msg\" : \"Metering Scheduler Failure: Retries were exhausted for fetching job status for the job with name: %+v for service Instance %v. Err:%+v3c9f026f-7713-434f-9514-e96ce6925bb0-cpu-2024-09-203c9f026f-7713-434f-9514-e96ce6925bb0Failed to execute specified method, after 3 attempts\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\"\n  }\n} ]",
+                "Severity": "Severe"
+            },
+            "message": "MLOps-metering-scheduler-failure",
+            "severity": "critical"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q1OXVO82QF95YQ",
+    "type": "alert",
+    "summary": "MLOps-metering-service-failure",
+    "self": "https://api.pagerduty.com/alerts/Q1OXVO82QF95YQ",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q1OXVO82QF95YQ",
+    "created_at": "2024-09-20T18:13:14-06:00",
+    "status": "resolved",
+    "resolved_at": "2024-09-20T23:20:41-06:00",
+    "alert_key": "63be104da79b473f8f228aeaa4a0bbcf",
+    "suppressed": false,
+    "service": {
+        "id": "PCLRF85",
+        "type": "service_reference",
+        "summary": "nesologz-mlops",
+        "self": "https://api.pagerduty.com/services/PCLRF85",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/PCLRF85"
+    },
+    "severity": "critical",
+    "incident": {
+        "id": "Q37LYIWNHN97AX",
+        "type": "incident_reference",
+        "summary": "[#621636] MLOps-metering-service-failure",
+        "self": "https://api.pagerduty.com/incidents/Q37LYIWNHN97AX",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q37LYIWNHN97AX"
+    },
+    "first_trigger_log_entry": {
+        "id": "R2M7SMONSD5KGASQQKM4669RG1",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R2M7SMONSD5KGASQQKM4669RG1",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q1OXVO82QF95YQ/log_entries/R2M7SMONSD5KGASQQKM4669RG1"
+    },
+    "body": {
+        "contexts": [
+            {
+                "type": "image",
+                "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png"
+            }
+        ],
+        "details": {
+            "Description": "Error in MLOps metering service logs indicating a failure in initiating metering (data collection, translation and shipment) cycle.",
+            "Samples": "Sample 3 events out of 3:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"metering-api-metering-api-cc5b5cf45-b46m8\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"78d957f4-ccb7-4f0f-aa57-3d5e601117a5\",\n    \"labels\" : {\n      \"app\" : \"metering-api\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"cc5b5cf45\",\n      \"release\" : \"metering-api\"\n    },\n    \"annotations\" : {\n      \"prometheus_io/path\" : \"/metrics\",\n      \"prometheus_io/port\" : \"10290\",\n      \"prometheus_io/scrape\" : \"true\",\n      \"wave_pusher_com/config-hash\" : \"33dedbf85774b81e3ab7b195e2af4e6a2c8214a0d8962ac0fafdc53a8081fea2\"\n    },\n    \"host\" : \"ip-192-168-142-201.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api\",\n    \"docker_id\" : \"99395ecf9ec867071d6d1a2a55a767aadcb826a07b52f330fa51345df56939d9\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:d60782f495fe831c5c1bf3a5184a294e5facd5972d6b860f4c01b9dc3e28dfec\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.44\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 828288475,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:09:38.455Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\\\",\\\"msg\\\":\\\"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource mapr and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-mapr-2024-09-20.json not found in S3 bucket\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.metering-api-metering-api-cc5b5cf45-b46m8.metering-api\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:09:38.455+00:00\",\n  \"LogSize\" : 2062,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:09:38.455Z\",\n    \"context\" : \"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\",\n    \"msg\" : \"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource mapr and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-mapr-2024-09-20.json not found in S3 bucket\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\"\n  }\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"metering-api-metering-api-cc5b5cf45-b46m8\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"78d957f4-ccb7-4f0f-aa57-3d5e601117a5\",\n    \"labels\" : {\n      \"app\" : \"metering-api\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"cc5b5cf45\",\n      \"release\" : \"metering-api\"\n    },\n    \"annotations\" : {\n      \"prometheus_io/path\" : \"/metrics\",\n      \"prometheus_io/port\" : \"10290\",\n      \"prometheus_io/scrape\" : \"true\",\n      \"wave_pusher_com/config-hash\" : \"33dedbf85774b81e3ab7b195e2af4e6a2c8214a0d8962ac0fafdc53a8081fea2\"\n    },\n    \"host\" : \"ip-192-168-142-201.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api\",\n    \"docker_id\" : \"99395ecf9ec867071d6d1a2a55a767aadcb826a07b52f330fa51345df56939d9\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:d60782f495fe831c5c1bf3a5184a294e5facd5972d6b860f4c01b9dc3e28dfec\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.44\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 828288475,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:09:38.180Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\\\",\\\"msg\\\":\\\"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource gpu and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-gpu-2024-09-20.json not found in S3 bucket\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.metering-api-metering-api-cc5b5cf45-b46m8.metering-api\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:09:38.181+00:00\",\n  \"LogSize\" : 2058,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:09:38.180Z\",\n    \"context\" : \"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\",\n    \"msg\" : \"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource gpu and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-gpu-2024-09-20.json not found in S3 bucket\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\"\n  }\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"metering-api-metering-api-cc5b5cf45-b46m8\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"78d957f4-ccb7-4f0f-aa57-3d5e601117a5\",\n    \"labels\" : {\n      \"app\" : \"metering-api\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"cc5b5cf45\",\n      \"release\" : \"metering-api\"\n    },\n    \"annotations\" : {\n      \"prometheus_io/path\" : \"/metrics\",\n      \"prometheus_io/port\" : \"10290\",\n      \"prometheus_io/scrape\" : \"true\",\n      \"wave_pusher_com/config-hash\" : \"33dedbf85774b81e3ab7b195e2af4e6a2c8214a0d8962ac0fafdc53a8081fea2\"\n    },\n    \"host\" : \"ip-192-168-142-201.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api\",\n    \"docker_id\" : \"99395ecf9ec867071d6d1a2a55a767aadcb826a07b52f330fa51345df56939d9\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:d60782f495fe831c5c1bf3a5184a294e5facd5972d6b860f4c01b9dc3e28dfec\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.44\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 828288475,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:09:37.892Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\\\",\\\"msg\\\":\\\"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource cpu and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-cpu-2024-09-20.json not found in S3 bucket\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.metering-api-metering-api-cc5b5cf45-b46m8.metering-api\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:09:37.892+00:00\",\n  \"LogSize\" : 2058,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:09:37.892Z\",\n    \"context\" : \"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\",\n    \"msg\" : \"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource cpu and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-cpu-2024-09-20.json not found in S3 bucket\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\"\n  }\n} ]",
+            "Severity": "Severe"
+        },
+        "cef_details": {
+            "client": "Logz.io Alerts",
+            "client_url": "https://app.logz.io#/dashboard/alerts/triggered?switchToAccountId=89316",
+            "contexts": [
+                {
+                    "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png",
+                    "type": "image"
+                }
+            ],
+            "dedup_key": "63be104da79b473f8f228aeaa4a0bbcf",
+            "description": "MLOps-metering-service-failure",
+            "details": {
+                "Description": "Error in MLOps metering service logs indicating a failure in initiating metering (data collection, translation and shipment) cycle.",
+                "Samples": "Sample 3 events out of 3:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"metering-api-metering-api-cc5b5cf45-b46m8\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"78d957f4-ccb7-4f0f-aa57-3d5e601117a5\",\n    \"labels\" : {\n      \"app\" : \"metering-api\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"cc5b5cf45\",\n      \"release\" : \"metering-api\"\n    },\n    \"annotations\" : {\n      \"prometheus_io/path\" : \"/metrics\",\n      \"prometheus_io/port\" : \"10290\",\n      \"prometheus_io/scrape\" : \"true\",\n      \"wave_pusher_com/config-hash\" : \"33dedbf85774b81e3ab7b195e2af4e6a2c8214a0d8962ac0fafdc53a8081fea2\"\n    },\n    \"host\" : \"ip-192-168-142-201.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api\",\n    \"docker_id\" : \"99395ecf9ec867071d6d1a2a55a767aadcb826a07b52f330fa51345df56939d9\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:d60782f495fe831c5c1bf3a5184a294e5facd5972d6b860f4c01b9dc3e28dfec\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.44\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 828288475,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:09:38.455Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\\\",\\\"msg\\\":\\\"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource mapr and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-mapr-2024-09-20.json not found in S3 bucket\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.metering-api-metering-api-cc5b5cf45-b46m8.metering-api\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:09:38.455+00:00\",\n  \"LogSize\" : 2062,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:09:38.455Z\",\n    \"context\" : \"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\",\n    \"msg\" : \"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource mapr and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-mapr-2024-09-20.json not found in S3 bucket\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\"\n  }\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"metering-api-metering-api-cc5b5cf45-b46m8\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"78d957f4-ccb7-4f0f-aa57-3d5e601117a5\",\n    \"labels\" : {\n      \"app\" : \"metering-api\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"cc5b5cf45\",\n      \"release\" : \"metering-api\"\n    },\n    \"annotations\" : {\n      \"prometheus_io/path\" : \"/metrics\",\n      \"prometheus_io/port\" : \"10290\",\n      \"prometheus_io/scrape\" : \"true\",\n      \"wave_pusher_com/config-hash\" : \"33dedbf85774b81e3ab7b195e2af4e6a2c8214a0d8962ac0fafdc53a8081fea2\"\n    },\n    \"host\" : \"ip-192-168-142-201.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api\",\n    \"docker_id\" : \"99395ecf9ec867071d6d1a2a55a767aadcb826a07b52f330fa51345df56939d9\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:d60782f495fe831c5c1bf3a5184a294e5facd5972d6b860f4c01b9dc3e28dfec\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.44\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 828288475,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:09:38.180Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\\\",\\\"msg\\\":\\\"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource gpu and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-gpu-2024-09-20.json not found in S3 bucket\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.metering-api-metering-api-cc5b5cf45-b46m8.metering-api\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:09:38.181+00:00\",\n  \"LogSize\" : 2058,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:09:38.180Z\",\n    \"context\" : \"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\",\n    \"msg\" : \"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource gpu and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-gpu-2024-09-20.json not found in S3 bucket\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\"\n  }\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"metering-api-metering-api-cc5b5cf45-b46m8\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"78d957f4-ccb7-4f0f-aa57-3d5e601117a5\",\n    \"labels\" : {\n      \"app\" : \"metering-api\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"cc5b5cf45\",\n      \"release\" : \"metering-api\"\n    },\n    \"annotations\" : {\n      \"prometheus_io/path\" : \"/metrics\",\n      \"prometheus_io/port\" : \"10290\",\n      \"prometheus_io/scrape\" : \"true\",\n      \"wave_pusher_com/config-hash\" : \"33dedbf85774b81e3ab7b195e2af4e6a2c8214a0d8962ac0fafdc53a8081fea2\"\n    },\n    \"host\" : \"ip-192-168-142-201.us-west-2.compute.internal\",\n    \"container_name\" : \"metering-api\",\n    \"docker_id\" : \"99395ecf9ec867071d6d1a2a55a767aadcb826a07b52f330fa51345df56939d9\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering@sha256:d60782f495fe831c5c1bf3a5184a294e5facd5972d6b860f4c01b9dc3e28dfec\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops-metering:v0.0.44\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 828288475,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:09:37.892Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\\\",\\\"msg\\\":\\\"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource cpu and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-cpu-2024-09-20.json not found in S3 bucket\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.metering-api-metering-api-cc5b5cf45-b46m8.metering-api\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:09:37.892+00:00\",\n  \"LogSize\" : 2058,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:09:37.892Z\",\n    \"context\" : \"/hpe-hcss/mlops-metering/internal/app/collect/collect.go:86\",\n    \"msg\" : \"Metering Service Failure: Error while fetching metric data from S3 Bucket for resource cpu and serviceInstance 3c9f026f-7713-434f-9514-e96ce6925bb0. Err : Metrics file 3c9f026f-7713-434f-9514-e96ce6925bb0-cpu-2024-09-20.json not found in S3 bucket\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\"\n  }\n} ]",
+                "Severity": "Severe"
+            },
+            "message": "MLOps-metering-service-failure",
+            "severity": "critical"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q1MGGNRAXR5OPQ",
+    "type": "alert",
+    "summary": "PCaaS Config Manager : Missing Argocd RDA URL in secrets file",
+    "self": "https://api.pagerduty.com/alerts/Q1MGGNRAXR5OPQ",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q1MGGNRAXR5OPQ",
+    "created_at": "2024-09-20T18:14:16-06:00",
+    "status": "triggered",
+    "resolved_at": null,
+    "alert_key": "942b783ef9af44d282f3aa326233e6ec",
+    "suppressed": false,
+    "service": {
+        "id": "P8WQHER",
+        "type": "service_reference",
+        "summary": "nesologz-gateway",
+        "self": "https://api.pagerduty.com/services/P8WQHER",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/P8WQHER"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q0DQGZREZIM0JK",
+        "type": "incident_reference",
+        "summary": "[#621637] PCaaS Config Manager : Missing Argocd RDA URL in secrets file",
+        "self": "https://api.pagerduty.com/incidents/Q0DQGZREZIM0JK",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q0DQGZREZIM0JK"
+    },
+    "first_trigger_log_entry": {
+        "id": "R5WPYFJQ9LD7XGK5H2XI00QAQM",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R5WPYFJQ9LD7XGK5H2XI00QAQM",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q1MGGNRAXR5OPQ/log_entries/R5WPYFJQ9LD7XGK5H2XI00QAQM"
+    },
+    "body": {
+        "contexts": [
+            {
+                "type": "image",
+                "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png"
+            }
+        ],
+        "details": {
+            "Description": "Unable to process metrics due to missing Argocd URL in secrets file",
+            "Samples": "Sample 3 events out of 3:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"pcaas-config-manager-v2-gateway-6d79755445-vz2x8\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"86c6797b-6956-41c1-afe5-09f5fd11f915\",\n    \"labels\" : {\n      \"app\" : \"pcaas-config-manager-v2-gateway\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"6d79755445\",\n      \"release\" : \"pcaas-config-manager-v2\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2023-08-07T17:56:14Z\",\n      \"wave_pusher_com/config-hash\" : \"9d5758fc4bef16abe55a10c07679645be6f64c4f3eb526779afd9666d692e67b\"\n    },\n    \"host\" : \"ip-192-168-133-57.us-west-2.compute.internal\",\n    \"container_name\" : \"pcaas-config-manager-v2\",\n    \"docker_id\" : \"fa57806df353c97cddc794bc6824890e4839615c95c5179e84a03d5bebc4bafa\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2@sha256:89562a6c89045dfa52260c369ad7636165133bb95b2c936064a2e775819fadf5\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2:v1.1.4\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 1349664815,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:10:31.405Z\\\",\\\"context\\\":\\\"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\\\",\\\"msg\\\":\\\"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 9451cba9-882c-4e30-9dd7-5fae72fe8853 is empty\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\",\\\"DED\\\":\\\"DED0000274\\\"}\",\n  \"fluentd_tags\" : \"gateway.pcaas-config-manager-v2-gateway-6d79755445-vz2x8.pcaas-config-manager-v2\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:10:31.405+00:00\",\n  \"LogSize\" : 1928,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:10:31.405Z\",\n    \"context\" : \"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\",\n    \"msg\" : \"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 9451cba9-882c-4e30-9dd7-5fae72fe8853 is empty\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\",\n    \"DED\" : \"DED0000274\"\n  }\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"pcaas-config-manager-v2-gateway-6d79755445-vz2x8\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"86c6797b-6956-41c1-afe5-09f5fd11f915\",\n    \"labels\" : {\n      \"app\" : \"pcaas-config-manager-v2-gateway\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"6d79755445\",\n      \"release\" : \"pcaas-config-manager-v2\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2023-08-07T17:56:14Z\",\n      \"wave_pusher_com/config-hash\" : \"9d5758fc4bef16abe55a10c07679645be6f64c4f3eb526779afd9666d692e67b\"\n    },\n    \"host\" : \"ip-192-168-133-57.us-west-2.compute.internal\",\n    \"container_name\" : \"pcaas-config-manager-v2\",\n    \"docker_id\" : \"fa57806df353c97cddc794bc6824890e4839615c95c5179e84a03d5bebc4bafa\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2@sha256:89562a6c89045dfa52260c369ad7636165133bb95b2c936064a2e775819fadf5\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2:v1.1.4\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 1349664815,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:10:30.315Z\\\",\\\"context\\\":\\\"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\\\",\\\"msg\\\":\\\"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 6e4ae529-03a2-41c1-b627-00d57ed1036e is empty\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\",\\\"DED\\\":\\\"DED0000274\\\"}\",\n  \"fluentd_tags\" : \"gateway.pcaas-config-manager-v2-gateway-6d79755445-vz2x8.pcaas-config-manager-v2\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:10:30.315+00:00\",\n  \"LogSize\" : 1928,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:10:30.315Z\",\n    \"context\" : \"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\",\n    \"msg\" : \"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 6e4ae529-03a2-41c1-b627-00d57ed1036e is empty\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\",\n    \"DED\" : \"DED0000274\"\n  }\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"pcaas-config-manager-v2-gateway-6d79755445-vz2x8\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"86c6797b-6956-41c1-afe5-09f5fd11f915\",\n    \"labels\" : {\n      \"app\" : \"pcaas-config-manager-v2-gateway\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"6d79755445\",\n      \"release\" : \"pcaas-config-manager-v2\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2023-08-07T17:56:14Z\",\n      \"wave_pusher_com/config-hash\" : \"9d5758fc4bef16abe55a10c07679645be6f64c4f3eb526779afd9666d692e67b\"\n    },\n    \"host\" : \"ip-192-168-133-57.us-west-2.compute.internal\",\n    \"container_name\" : \"pcaas-config-manager-v2\",\n    \"docker_id\" : \"fa57806df353c97cddc794bc6824890e4839615c95c5179e84a03d5bebc4bafa\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2@sha256:89562a6c89045dfa52260c369ad7636165133bb95b2c936064a2e775819fadf5\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2:v1.1.4\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 1349664815,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:10:29.119Z\\\",\\\"context\\\":\\\"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\\\",\\\"msg\\\":\\\"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 59c77ee3-74a4-4a6d-9c58-b6e95cd6521f is empty\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\",\\\"DED\\\":\\\"DED0000274\\\"}\",\n  \"fluentd_tags\" : \"gateway.pcaas-config-manager-v2-gateway-6d79755445-vz2x8.pcaas-config-manager-v2\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:10:29.120+00:00\",\n  \"LogSize\" : 1928,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:10:29.119Z\",\n    \"context\" : \"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\",\n    \"msg\" : \"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 59c77ee3-74a4-4a6d-9c58-b6e95cd6521f is empty\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\",\n    \"DED\" : \"DED0000274\"\n  }\n} ]",
+            "Severity": "Low"
+        },
+        "cef_details": {
+            "client": "Logz.io Alerts",
+            "client_url": "https://app.logz.io#/dashboard/alerts/triggered?switchToAccountId=89316",
+            "contexts": [
+                {
+                    "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png",
+                    "type": "image"
+                }
+            ],
+            "dedup_key": "942b783ef9af44d282f3aa326233e6ec",
+            "description": "PCaaS Config Manager : Missing Argocd RDA URL in secrets file",
+            "details": {
+                "Description": "Unable to process metrics due to missing Argocd URL in secrets file",
+                "Samples": "Sample 3 events out of 3:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"pcaas-config-manager-v2-gateway-6d79755445-vz2x8\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"86c6797b-6956-41c1-afe5-09f5fd11f915\",\n    \"labels\" : {\n      \"app\" : \"pcaas-config-manager-v2-gateway\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"6d79755445\",\n      \"release\" : \"pcaas-config-manager-v2\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2023-08-07T17:56:14Z\",\n      \"wave_pusher_com/config-hash\" : \"9d5758fc4bef16abe55a10c07679645be6f64c4f3eb526779afd9666d692e67b\"\n    },\n    \"host\" : \"ip-192-168-133-57.us-west-2.compute.internal\",\n    \"container_name\" : \"pcaas-config-manager-v2\",\n    \"docker_id\" : \"fa57806df353c97cddc794bc6824890e4839615c95c5179e84a03d5bebc4bafa\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2@sha256:89562a6c89045dfa52260c369ad7636165133bb95b2c936064a2e775819fadf5\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2:v1.1.4\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 1349664815,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:10:31.405Z\\\",\\\"context\\\":\\\"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\\\",\\\"msg\\\":\\\"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 9451cba9-882c-4e30-9dd7-5fae72fe8853 is empty\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\",\\\"DED\\\":\\\"DED0000274\\\"}\",\n  \"fluentd_tags\" : \"gateway.pcaas-config-manager-v2-gateway-6d79755445-vz2x8.pcaas-config-manager-v2\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:10:31.405+00:00\",\n  \"LogSize\" : 1928,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:10:31.405Z\",\n    \"context\" : \"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\",\n    \"msg\" : \"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 9451cba9-882c-4e30-9dd7-5fae72fe8853 is empty\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\",\n    \"DED\" : \"DED0000274\"\n  }\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"pcaas-config-manager-v2-gateway-6d79755445-vz2x8\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"86c6797b-6956-41c1-afe5-09f5fd11f915\",\n    \"labels\" : {\n      \"app\" : \"pcaas-config-manager-v2-gateway\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"6d79755445\",\n      \"release\" : \"pcaas-config-manager-v2\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2023-08-07T17:56:14Z\",\n      \"wave_pusher_com/config-hash\" : \"9d5758fc4bef16abe55a10c07679645be6f64c4f3eb526779afd9666d692e67b\"\n    },\n    \"host\" : \"ip-192-168-133-57.us-west-2.compute.internal\",\n    \"container_name\" : \"pcaas-config-manager-v2\",\n    \"docker_id\" : \"fa57806df353c97cddc794bc6824890e4839615c95c5179e84a03d5bebc4bafa\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2@sha256:89562a6c89045dfa52260c369ad7636165133bb95b2c936064a2e775819fadf5\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2:v1.1.4\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 1349664815,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:10:30.315Z\\\",\\\"context\\\":\\\"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\\\",\\\"msg\\\":\\\"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 6e4ae529-03a2-41c1-b627-00d57ed1036e is empty\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\",\\\"DED\\\":\\\"DED0000274\\\"}\",\n  \"fluentd_tags\" : \"gateway.pcaas-config-manager-v2-gateway-6d79755445-vz2x8.pcaas-config-manager-v2\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:10:30.315+00:00\",\n  \"LogSize\" : 1928,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:10:30.315Z\",\n    \"context\" : \"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\",\n    \"msg\" : \"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 6e4ae529-03a2-41c1-b627-00d57ed1036e is empty\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\",\n    \"DED\" : \"DED0000274\"\n  }\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"pcaas-config-manager-v2-gateway-6d79755445-vz2x8\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"86c6797b-6956-41c1-afe5-09f5fd11f915\",\n    \"labels\" : {\n      \"app\" : \"pcaas-config-manager-v2-gateway\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"6d79755445\",\n      \"release\" : \"pcaas-config-manager-v2\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2023-08-07T17:56:14Z\",\n      \"wave_pusher_com/config-hash\" : \"9d5758fc4bef16abe55a10c07679645be6f64c4f3eb526779afd9666d692e67b\"\n    },\n    \"host\" : \"ip-192-168-133-57.us-west-2.compute.internal\",\n    \"container_name\" : \"pcaas-config-manager-v2\",\n    \"docker_id\" : \"fa57806df353c97cddc794bc6824890e4839615c95c5179e84a03d5bebc4bafa\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2@sha256:89562a6c89045dfa52260c369ad7636165133bb95b2c936064a2e775819fadf5\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2:v1.1.4\"\n  },\n  \"cluster\" : \"neso\",\n  \"logzio-signature\" : 1349664815,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:10:29.119Z\\\",\\\"context\\\":\\\"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\\\",\\\"msg\\\":\\\"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 59c77ee3-74a4-4a6d-9c58-b6e95cd6521f is empty\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\",\\\"DED\\\":\\\"DED0000274\\\"}\",\n  \"fluentd_tags\" : \"gateway.pcaas-config-manager-v2-gateway-6d79755445-vz2x8.pcaas-config-manager-v2\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ],\n  \"@timestamp\" : \"2024-09-21T00:10:29.120+00:00\",\n  \"LogSize\" : 1928,\n  \"stream\" : \"stderr\",\n  \"hpe\" : {\n    \"level\" : \"error\",\n    \"@timestamp\" : \"2024-09-21T00:10:29.119Z\",\n    \"context\" : \"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:459\",\n    \"msg\" : \"ArgoCDPublicURL for tenant (Aegon-cq634dc6gilfl44c8urg) with deployment ID 59c77ee3-74a4-4a6d-9c58-b6e95cd6521f is empty\",\n    \"requestID\" : \"\",\n    \"tenantID\" : \"\",\n    \"userID\" : \"\",\n    \"type\" : \"log\",\n    \"DED\" : \"DED0000274\"\n  }\n} ]",
+                "Severity": "Low"
+            },
+            "message": "PCaaS Config Manager : Missing Argocd RDA URL in secrets file",
+            "severity": "warning"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q2KEKOT67SGNXM",
+    "type": "alert",
+    "summary": "RDA Delegate certificate expired alert",
+    "self": "https://api.pagerduty.com/alerts/Q2KEKOT67SGNXM",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q2KEKOT67SGNXM",
+    "created_at": "2024-09-20T18:14:22-06:00",
+    "status": "triggered",
+    "resolved_at": null,
+    "alert_key": "7248dc601b11495f800c671ddbe96099",
+    "suppressed": false,
+    "service": {
+        "id": "PBJYWYK",
+        "type": "service_reference",
+        "summary": "oberonlogz-agena",
+        "self": "https://api.pagerduty.com/services/PBJYWYK",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/PBJYWYK"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q1SBGRXYFMH939",
+        "type": "incident_reference",
+        "summary": "[#621638] RDA Delegate certificate expired alert",
+        "self": "https://api.pagerduty.com/incidents/Q1SBGRXYFMH939",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q1SBGRXYFMH939"
+    },
+    "first_trigger_log_entry": {
+        "id": "RQ7DNR060CIUNRN54AZJZ882MN",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/RQ7DNR060CIUNRN54AZJZ882MN",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q2KEKOT67SGNXM/log_entries/RQ7DNR060CIUNRN54AZJZ882MN"
+    },
+    "body": {
+        "contexts": [
+            {
+                "type": "image",
+                "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png"
+            }
+        ],
+        "details": {
+            "Description": "RDA Delegate certificate expired alert",
+            "Samples": "Sample 10 events out of 2552:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"agena-intg2-rda-delegate-6994898f6d-tnqbs\",\n    \"namespace_name\" : \"agena\",\n    \"pod_id\" : \"256bf48c-21f1-47a7-96aa-9516f305f1fc\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"agena-intg2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpeh6i7ijh7bltfbpiug\",\n      \"pod-template-hash\" : \"6994898f6d\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-02-01T16:06:59+05:30\"\n    },\n    \"host\" : \"ip-192-168-191-175.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"7cec119964d45d5377c114f53a378c023544a382635e942f38590c276720a65e\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 713275056,\n  \"@timestamp\" : \"2024-09-21T00:10:59.591+00:00\",\n  \"LogSize\" : 1276,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 agena-intg2-rda-delegate-6994898f6d-tnqbs rda-delegate[8]: ERR [http-client.cpp:530] wc3823070 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"agena.agena-intg2-rda-delegate-6994898f6d-tnqbs.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"agena-intg2-rda-delegate-6994898f6d-tnqbs\",\n    \"namespace_name\" : \"agena\",\n    \"pod_id\" : \"256bf48c-21f1-47a7-96aa-9516f305f1fc\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"agena-intg2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpeh6i7ijh7bltfbpiug\",\n      \"pod-template-hash\" : \"6994898f6d\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-02-01T16:06:59+05:30\"\n    },\n    \"host\" : \"ip-192-168-191-175.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"7cec119964d45d5377c114f53a378c023544a382635e942f38590c276720a65e\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 713275056,\n  \"@timestamp\" : \"2024-09-21T00:10:59.591+00:00\",\n  \"LogSize\" : 1376,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 agena-intg2-rda-delegate-6994898f6d-tnqbs rda-delegate[8]: ERR [delegate.cpp:521] Could not get connection-ticket for 7fa3e06a-7715-4360-bc9f-452e35868d35 : txp connect(): Certificate expired, delegate sid:d-dbd996e8-ddfa@rc5396f\",\n  \"fluentd_tags\" : \"agena.agena-intg2-rda-delegate-6994898f6d-tnqbs.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-dev-2-rda-delegate-658d698778-lvx5n\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"15918241-2e12-446d-8958-0f2af094fa4e\",\n    \"labels\" : {\n      \"app_kubernetes_io/caller\" : \"agena-rda-controller\",\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"mlops-dev-2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpqjgm3tee7l08b2sr7g\",\n      \"pod-template-hash\" : \"658d698778\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-05-28T16:18:08+05:30\",\n      \"kubernetes_io/limit-ranger\" : \"LimitRanger plugin set: memory request for container rda-delegate-renew-cert-cron; memory limit for container rda-delegate-renew-cert-cron; memory request for init container delegate-cert-copier; memory limit for init container delegate-cert-copier\"\n    },\n    \"host\" : \"ip-192-168-180-39.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"a4ed7ddbae54b4da5ca8483d09d0758a102ea9ddb8780030f3874ac5aa832039\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:35b598ea8991ff7866d9bf0f460d9a8a495cd4a6785fe02aa931894b044dcf24\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.27.12\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1702489721,\n  \"@timestamp\" : \"2024-09-21T00:10:59.512+00:00\",\n  \"LogSize\" : 1607,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 mlops-dev-2-rda-delegate-658d698778-lvx5n rda-delegate[1]: ERR [http-client.cpp:528] wc2339266 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"mlops.mlops-dev-2-rda-delegate-658d698778-lvx5n.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-dev-2-rda-delegate-658d698778-lvx5n\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"15918241-2e12-446d-8958-0f2af094fa4e\",\n    \"labels\" : {\n      \"app_kubernetes_io/caller\" : \"agena-rda-controller\",\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"mlops-dev-2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpqjgm3tee7l08b2sr7g\",\n      \"pod-template-hash\" : \"658d698778\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-05-28T16:18:08+05:30\",\n      \"kubernetes_io/limit-ranger\" : \"LimitRanger plugin set: memory request for container rda-delegate-renew-cert-cron; memory limit for container rda-delegate-renew-cert-cron; memory request for init container delegate-cert-copier; memory limit for init container delegate-cert-copier\"\n    },\n    \"host\" : \"ip-192-168-180-39.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"a4ed7ddbae54b4da5ca8483d09d0758a102ea9ddb8780030f3874ac5aa832039\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:35b598ea8991ff7866d9bf0f460d9a8a495cd4a6785fe02aa931894b044dcf24\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.27.12\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1702489721,\n  \"@timestamp\" : \"2024-09-21T00:10:59.512+00:00\",\n  \"LogSize\" : 1707,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 mlops-dev-2-rda-delegate-658d698778-lvx5n rda-delegate[1]: ERR [delegate.cpp:445] Could not get connection-ticket for 06bd632f-8666-4e6b-b7c7-2fe34be556c5 : txp connect(): Certificate expired, delegate sid:d-36011f3e-ed5a@raa90a2\",\n  \"fluentd_tags\" : \"mlops.mlops-dev-2-rda-delegate-658d698778-lvx5n.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"agena-intg2-rda-delegate-6994898f6d-h8hxk\",\n    \"namespace_name\" : \"agena\",\n    \"pod_id\" : \"66a67bba-95fa-4d60-8eb6-6301135b4a2d\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"agena-intg2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpeh6i7ijh7bltfbpiug\",\n      \"pod-template-hash\" : \"6994898f6d\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-02-01T16:06:59+05:30\"\n    },\n    \"host\" : \"ip-192-168-101-92.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"36e2e656c3d2b3aac21056c9f8615693a9ccb4253c56f620e50edd4253dcad96\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 713275056,\n  \"@timestamp\" : \"2024-09-21T00:10:59.209+00:00\",\n  \"LogSize\" : 1375,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 agena-intg2-rda-delegate-6994898f6d-h8hxk rda-delegate[7]: ERR [delegate.cpp:521] Could not get connection-ticket for 7fa3e06a-7715-4360-bc9f-452e35868d35 : txp connect(): Certificate expired, delegate sid:d-dbd996e8-ddfa@re4de48\",\n  \"fluentd_tags\" : \"agena.agena-intg2-rda-delegate-6994898f6d-h8hxk.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"agena-intg2-rda-delegate-6994898f6d-h8hxk\",\n    \"namespace_name\" : \"agena\",\n    \"pod_id\" : \"66a67bba-95fa-4d60-8eb6-6301135b4a2d\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"agena-intg2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpeh6i7ijh7bltfbpiug\",\n      \"pod-template-hash\" : \"6994898f6d\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-02-01T16:06:59+05:30\"\n    },\n    \"host\" : \"ip-192-168-101-92.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"36e2e656c3d2b3aac21056c9f8615693a9ccb4253c56f620e50edd4253dcad96\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 713275056,\n  \"@timestamp\" : \"2024-09-21T00:10:59.209+00:00\",\n  \"LogSize\" : 1275,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 agena-intg2-rda-delegate-6994898f6d-h8hxk rda-delegate[7]: ERR [http-client.cpp:530] wc3822258 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"agena.agena-intg2-rda-delegate-6994898f6d-h8hxk.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-dev-2-rda-delegate-658d698778-lvx5n\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"15918241-2e12-446d-8958-0f2af094fa4e\",\n    \"labels\" : {\n      \"app_kubernetes_io/caller\" : \"agena-rda-controller\",\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"mlops-dev-2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpqjgm3tee7l08b2sr7g\",\n      \"pod-template-hash\" : \"658d698778\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-05-28T16:18:08+05:30\",\n      \"kubernetes_io/limit-ranger\" : \"LimitRanger plugin set: memory request for container rda-delegate-renew-cert-cron; memory limit for container rda-delegate-renew-cert-cron; memory request for init container delegate-cert-copier; memory limit for init container delegate-cert-copier\"\n    },\n    \"host\" : \"ip-192-168-180-39.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"a4ed7ddbae54b4da5ca8483d09d0758a102ea9ddb8780030f3874ac5aa832039\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:35b598ea8991ff7866d9bf0f460d9a8a495cd4a6785fe02aa931894b044dcf24\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.27.12\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1702489721,\n  \"@timestamp\" : \"2024-09-21T00:10:58.872+00:00\",\n  \"LogSize\" : 1607,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:58 mlops-dev-2-rda-delegate-658d698778-lvx5n rda-delegate[1]: ERR [http-client.cpp:528] wc2339265 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"mlops.mlops-dev-2-rda-delegate-658d698778-lvx5n.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-dev-2-rda-delegate-658d698778-lvx5n\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"15918241-2e12-446d-8958-0f2af094fa4e\",\n    \"labels\" : {\n      \"app_kubernetes_io/caller\" : \"agena-rda-controller\",\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"mlops-dev-2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpqjgm3tee7l08b2sr7g\",\n      \"pod-template-hash\" : \"658d698778\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-05-28T16:18:08+05:30\",\n      \"kubernetes_io/limit-ranger\" : \"LimitRanger plugin set: memory request for container rda-delegate-renew-cert-cron; memory limit for container rda-delegate-renew-cert-cron; memory request for init container delegate-cert-copier; memory limit for init container delegate-cert-copier\"\n    },\n    \"host\" : \"ip-192-168-180-39.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"a4ed7ddbae54b4da5ca8483d09d0758a102ea9ddb8780030f3874ac5aa832039\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:35b598ea8991ff7866d9bf0f460d9a8a495cd4a6785fe02aa931894b044dcf24\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.27.12\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1702489721,\n  \"@timestamp\" : \"2024-09-21T00:10:58.872+00:00\",\n  \"LogSize\" : 1707,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:58 mlops-dev-2-rda-delegate-658d698778-lvx5n rda-delegate[1]: ERR [delegate.cpp:445] Could not get connection-ticket for 06bd632f-8666-4e6b-b7c7-2fe34be556c5 : txp connect(): Certificate expired, delegate sid:d-36011f3e-ed5a@raa90a2\",\n  \"fluentd_tags\" : \"mlops.mlops-dev-2-rda-delegate-658d698778-lvx5n.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"9e0622ce-c89e-4179-b0ab-c2836cd068b8\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"hpe-greenlake-coe-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"c2cc1mvs57r58ikoq8d0\",\n      \"pod-template-hash\" : \"59cb89478b\"\n    },\n    \"host\" : \"ip-192-168-161-151.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"3636b1eb10c71c3cb6deee99a6972262d0f1908e618e555293a86a1de757a1cc\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1473226142,\n  \"@timestamp\" : \"2024-09-21T00:10:58.714+00:00\",\n  \"LogSize\" : 1326,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:58 hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff rda-delegate[7]: ERR [delegate.cpp:521] Could not get connection-ticket for 3e1e25d4-761b-4f35-8006-bcf7063c8df3 : txp connect(): Certificate expired, delegate sid:d-0bd97263-b87f@r26d2d7\",\n  \"fluentd_tags\" : \"gateway.hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"9e0622ce-c89e-4179-b0ab-c2836cd068b8\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"hpe-greenlake-coe-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"c2cc1mvs57r58ikoq8d0\",\n      \"pod-template-hash\" : \"59cb89478b\"\n    },\n    \"host\" : \"ip-192-168-161-151.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"3636b1eb10c71c3cb6deee99a6972262d0f1908e618e555293a86a1de757a1cc\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1473226142,\n  \"@timestamp\" : \"2024-09-21T00:10:58.714+00:00\",\n  \"LogSize\" : 1225,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:58 hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff rda-delegate[7]: ERR [http-client.cpp:530] wc107277 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"gateway.hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n} ]",
+            "Severity": "Low"
+        },
+        "cef_details": {
+            "client": "Logz.io Alerts",
+            "client_url": "https://app.logz.io#/dashboard/alerts/triggered?switchToAccountId=93597",
+            "contexts": [
+                {
+                    "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png",
+                    "type": "image"
+                }
+            ],
+            "dedup_key": "7248dc601b11495f800c671ddbe96099",
+            "description": "RDA Delegate certificate expired alert",
+            "details": {
+                "Description": "RDA Delegate certificate expired alert",
+                "Samples": "Sample 10 events out of 2552:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"agena-intg2-rda-delegate-6994898f6d-tnqbs\",\n    \"namespace_name\" : \"agena\",\n    \"pod_id\" : \"256bf48c-21f1-47a7-96aa-9516f305f1fc\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"agena-intg2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpeh6i7ijh7bltfbpiug\",\n      \"pod-template-hash\" : \"6994898f6d\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-02-01T16:06:59+05:30\"\n    },\n    \"host\" : \"ip-192-168-191-175.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"7cec119964d45d5377c114f53a378c023544a382635e942f38590c276720a65e\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 713275056,\n  \"@timestamp\" : \"2024-09-21T00:10:59.591+00:00\",\n  \"LogSize\" : 1276,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 agena-intg2-rda-delegate-6994898f6d-tnqbs rda-delegate[8]: ERR [http-client.cpp:530] wc3823070 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"agena.agena-intg2-rda-delegate-6994898f6d-tnqbs.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"agena-intg2-rda-delegate-6994898f6d-tnqbs\",\n    \"namespace_name\" : \"agena\",\n    \"pod_id\" : \"256bf48c-21f1-47a7-96aa-9516f305f1fc\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"agena-intg2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpeh6i7ijh7bltfbpiug\",\n      \"pod-template-hash\" : \"6994898f6d\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-02-01T16:06:59+05:30\"\n    },\n    \"host\" : \"ip-192-168-191-175.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"7cec119964d45d5377c114f53a378c023544a382635e942f38590c276720a65e\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 713275056,\n  \"@timestamp\" : \"2024-09-21T00:10:59.591+00:00\",\n  \"LogSize\" : 1376,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 agena-intg2-rda-delegate-6994898f6d-tnqbs rda-delegate[8]: ERR [delegate.cpp:521] Could not get connection-ticket for 7fa3e06a-7715-4360-bc9f-452e35868d35 : txp connect(): Certificate expired, delegate sid:d-dbd996e8-ddfa@rc5396f\",\n  \"fluentd_tags\" : \"agena.agena-intg2-rda-delegate-6994898f6d-tnqbs.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-dev-2-rda-delegate-658d698778-lvx5n\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"15918241-2e12-446d-8958-0f2af094fa4e\",\n    \"labels\" : {\n      \"app_kubernetes_io/caller\" : \"agena-rda-controller\",\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"mlops-dev-2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpqjgm3tee7l08b2sr7g\",\n      \"pod-template-hash\" : \"658d698778\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-05-28T16:18:08+05:30\",\n      \"kubernetes_io/limit-ranger\" : \"LimitRanger plugin set: memory request for container rda-delegate-renew-cert-cron; memory limit for container rda-delegate-renew-cert-cron; memory request for init container delegate-cert-copier; memory limit for init container delegate-cert-copier\"\n    },\n    \"host\" : \"ip-192-168-180-39.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"a4ed7ddbae54b4da5ca8483d09d0758a102ea9ddb8780030f3874ac5aa832039\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:35b598ea8991ff7866d9bf0f460d9a8a495cd4a6785fe02aa931894b044dcf24\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.27.12\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1702489721,\n  \"@timestamp\" : \"2024-09-21T00:10:59.512+00:00\",\n  \"LogSize\" : 1607,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 mlops-dev-2-rda-delegate-658d698778-lvx5n rda-delegate[1]: ERR [http-client.cpp:528] wc2339266 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"mlops.mlops-dev-2-rda-delegate-658d698778-lvx5n.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-dev-2-rda-delegate-658d698778-lvx5n\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"15918241-2e12-446d-8958-0f2af094fa4e\",\n    \"labels\" : {\n      \"app_kubernetes_io/caller\" : \"agena-rda-controller\",\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"mlops-dev-2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpqjgm3tee7l08b2sr7g\",\n      \"pod-template-hash\" : \"658d698778\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-05-28T16:18:08+05:30\",\n      \"kubernetes_io/limit-ranger\" : \"LimitRanger plugin set: memory request for container rda-delegate-renew-cert-cron; memory limit for container rda-delegate-renew-cert-cron; memory request for init container delegate-cert-copier; memory limit for init container delegate-cert-copier\"\n    },\n    \"host\" : \"ip-192-168-180-39.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"a4ed7ddbae54b4da5ca8483d09d0758a102ea9ddb8780030f3874ac5aa832039\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:35b598ea8991ff7866d9bf0f460d9a8a495cd4a6785fe02aa931894b044dcf24\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.27.12\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1702489721,\n  \"@timestamp\" : \"2024-09-21T00:10:59.512+00:00\",\n  \"LogSize\" : 1707,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 mlops-dev-2-rda-delegate-658d698778-lvx5n rda-delegate[1]: ERR [delegate.cpp:445] Could not get connection-ticket for 06bd632f-8666-4e6b-b7c7-2fe34be556c5 : txp connect(): Certificate expired, delegate sid:d-36011f3e-ed5a@raa90a2\",\n  \"fluentd_tags\" : \"mlops.mlops-dev-2-rda-delegate-658d698778-lvx5n.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"agena-intg2-rda-delegate-6994898f6d-h8hxk\",\n    \"namespace_name\" : \"agena\",\n    \"pod_id\" : \"66a67bba-95fa-4d60-8eb6-6301135b4a2d\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"agena-intg2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpeh6i7ijh7bltfbpiug\",\n      \"pod-template-hash\" : \"6994898f6d\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-02-01T16:06:59+05:30\"\n    },\n    \"host\" : \"ip-192-168-101-92.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"36e2e656c3d2b3aac21056c9f8615693a9ccb4253c56f620e50edd4253dcad96\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 713275056,\n  \"@timestamp\" : \"2024-09-21T00:10:59.209+00:00\",\n  \"LogSize\" : 1375,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 agena-intg2-rda-delegate-6994898f6d-h8hxk rda-delegate[7]: ERR [delegate.cpp:521] Could not get connection-ticket for 7fa3e06a-7715-4360-bc9f-452e35868d35 : txp connect(): Certificate expired, delegate sid:d-dbd996e8-ddfa@re4de48\",\n  \"fluentd_tags\" : \"agena.agena-intg2-rda-delegate-6994898f6d-h8hxk.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"agena-intg2-rda-delegate-6994898f6d-h8hxk\",\n    \"namespace_name\" : \"agena\",\n    \"pod_id\" : \"66a67bba-95fa-4d60-8eb6-6301135b4a2d\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"agena-intg2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpeh6i7ijh7bltfbpiug\",\n      \"pod-template-hash\" : \"6994898f6d\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-02-01T16:06:59+05:30\"\n    },\n    \"host\" : \"ip-192-168-101-92.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"36e2e656c3d2b3aac21056c9f8615693a9ccb4253c56f620e50edd4253dcad96\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 713275056,\n  \"@timestamp\" : \"2024-09-21T00:10:59.209+00:00\",\n  \"LogSize\" : 1275,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:59 agena-intg2-rda-delegate-6994898f6d-h8hxk rda-delegate[7]: ERR [http-client.cpp:530] wc3822258 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"agena.agena-intg2-rda-delegate-6994898f6d-h8hxk.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-dev-2-rda-delegate-658d698778-lvx5n\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"15918241-2e12-446d-8958-0f2af094fa4e\",\n    \"labels\" : {\n      \"app_kubernetes_io/caller\" : \"agena-rda-controller\",\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"mlops-dev-2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpqjgm3tee7l08b2sr7g\",\n      \"pod-template-hash\" : \"658d698778\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-05-28T16:18:08+05:30\",\n      \"kubernetes_io/limit-ranger\" : \"LimitRanger plugin set: memory request for container rda-delegate-renew-cert-cron; memory limit for container rda-delegate-renew-cert-cron; memory request for init container delegate-cert-copier; memory limit for init container delegate-cert-copier\"\n    },\n    \"host\" : \"ip-192-168-180-39.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"a4ed7ddbae54b4da5ca8483d09d0758a102ea9ddb8780030f3874ac5aa832039\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:35b598ea8991ff7866d9bf0f460d9a8a495cd4a6785fe02aa931894b044dcf24\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.27.12\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1702489721,\n  \"@timestamp\" : \"2024-09-21T00:10:58.872+00:00\",\n  \"LogSize\" : 1607,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:58 mlops-dev-2-rda-delegate-658d698778-lvx5n rda-delegate[1]: ERR [http-client.cpp:528] wc2339265 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"mlops.mlops-dev-2-rda-delegate-658d698778-lvx5n.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-dev-2-rda-delegate-658d698778-lvx5n\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"15918241-2e12-446d-8958-0f2af094fa4e\",\n    \"labels\" : {\n      \"app_kubernetes_io/caller\" : \"agena-rda-controller\",\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"mlops-dev-2-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"bpqjgm3tee7l08b2sr7g\",\n      \"pod-template-hash\" : \"658d698778\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2022-05-28T16:18:08+05:30\",\n      \"kubernetes_io/limit-ranger\" : \"LimitRanger plugin set: memory request for container rda-delegate-renew-cert-cron; memory limit for container rda-delegate-renew-cert-cron; memory request for init container delegate-cert-copier; memory limit for init container delegate-cert-copier\"\n    },\n    \"host\" : \"ip-192-168-180-39.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"a4ed7ddbae54b4da5ca8483d09d0758a102ea9ddb8780030f3874ac5aa832039\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:35b598ea8991ff7866d9bf0f460d9a8a495cd4a6785fe02aa931894b044dcf24\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.27.12\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1702489721,\n  \"@timestamp\" : \"2024-09-21T00:10:58.872+00:00\",\n  \"LogSize\" : 1707,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:58 mlops-dev-2-rda-delegate-658d698778-lvx5n rda-delegate[1]: ERR [delegate.cpp:445] Could not get connection-ticket for 06bd632f-8666-4e6b-b7c7-2fe34be556c5 : txp connect(): Certificate expired, delegate sid:d-36011f3e-ed5a@raa90a2\",\n  \"fluentd_tags\" : \"mlops.mlops-dev-2-rda-delegate-658d698778-lvx5n.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"9e0622ce-c89e-4179-b0ab-c2836cd068b8\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"hpe-greenlake-coe-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"c2cc1mvs57r58ikoq8d0\",\n      \"pod-template-hash\" : \"59cb89478b\"\n    },\n    \"host\" : \"ip-192-168-161-151.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"3636b1eb10c71c3cb6deee99a6972262d0f1908e618e555293a86a1de757a1cc\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1473226142,\n  \"@timestamp\" : \"2024-09-21T00:10:58.714+00:00\",\n  \"LogSize\" : 1326,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:58 hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff rda-delegate[7]: ERR [delegate.cpp:521] Could not get connection-ticket for 3e1e25d4-761b-4f35-8006-bcf7063c8df3 : txp connect(): Certificate expired, delegate sid:d-0bd97263-b87f@r26d2d7\",\n  \"fluentd_tags\" : \"gateway.hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"9e0622ce-c89e-4179-b0ab-c2836cd068b8\",\n    \"labels\" : {\n      \"app_kubernetes_io/instance\" : \"agena-rda-delegate\",\n      \"app_kubernetes_io/name\" : \"hpe-greenlake-coe-rda-delegate\",\n      \"app_kubernetes_io/tenant-id\" : \"c2cc1mvs57r58ikoq8d0\",\n      \"pod-template-hash\" : \"59cb89478b\"\n    },\n    \"host\" : \"ip-192-168-161-151.us-west-2.compute.internal\",\n    \"container_name\" : \"agena-rda-delegate\",\n    \"docker_id\" : \"3636b1eb10c71c3cb6deee99a6972262d0f1908e618e555293a86a1de757a1cc\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate@sha256:df063a09f86e7d1be6360337dde7caa861676718d7c182a1bf7e96a92f1a940b\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/agena-rda-delegate:v1.29.1\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1473226142,\n  \"@timestamp\" : \"2024-09-21T00:10:58.714+00:00\",\n  \"LogSize\" : 1225,\n  \"stream\" : \"stderr\",\n  \"type\" : \"k8s\",\n  \"message\" : \"Sep 21 00:10:58 hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff rda-delegate[7]: ERR [http-client.cpp:530] wc107277 txp connect(): Certificate expired\",\n  \"fluentd_tags\" : \"gateway.hpe-greenlake-coe-rda-delegate-59cb89478b-xhgff.agena-rda-delegate\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\" ]\n} ]",
+                "Severity": "Low"
+            },
+            "message": "RDA Delegate certificate expired alert",
+            "severity": "warning"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q362235VEX703A",
+    "type": "alert",
+    "summary": "Unified Analytics Melody \u2013 Routing Worker Lambda Processing Failed",
+    "self": "https://api.pagerduty.com/alerts/Q362235VEX703A",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q362235VEX703A",
+    "created_at": "2024-09-20T18:15:51-06:00",
+    "status": "resolved",
+    "resolved_at": "2024-09-26T23:32:56-06:00",
+    "alert_key": "bd708806b2df4d81843d5f750a1475ee",
+    "suppressed": false,
+    "service": {
+        "id": "PG13E1K",
+        "type": "service_reference",
+        "summary": "unified-api-intg",
+        "self": "https://api.pagerduty.com/services/PG13E1K",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/PG13E1K"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q1CZMKDRYOD21E",
+        "type": "incident_reference",
+        "summary": "[#621639] Unified Analytics Melody \u2013 Routing Worker Lambda Processing Failed",
+        "self": "https://api.pagerduty.com/incidents/Q1CZMKDRYOD21E",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q1CZMKDRYOD21E"
+    },
+    "first_trigger_log_entry": {
+        "id": "R9OCZ1DE4B4CGRIKZAP4MN8IMG",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R9OCZ1DE4B4CGRIKZAP4MN8IMG",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q362235VEX703A/log_entries/R9OCZ1DE4B4CGRIKZAP4MN8IMG"
+    },
+    "body": {
+        "contexts": [],
+        "details": {
+            "Alarm Description": "A lambda processing error has occurred. This error can be caused due to failure in compressing file or failure in collating routing log forwarder lambda data or any other processing. Please follow below runbook for resolution - https://hpe.atlassian.net/wiki/spaces/HPEUCP/pages/2540013922/Unified+API+Analytics+Runbook",
+            "Alarm Name": "unifiedapi-analytics-dev-analytics_lambda_routing_logs_collector_worker_md_polaris-error-polaris",
+            "ErrorDetails": {
+                "error_message": "Expecting ',' delimiter: line 1 column 756 (char 755)",
+                "error_type": "JSONDecodeError"
+            },
+            "Region": "us-west-2",
+            "Request Id": "b383ab28-409c-5b82-a8a6-f44052f23aac",
+            "cloud watch log url": "https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logsV2:log-groups/log-group/$252Faws$252Flambda$252Fanalytics_lambda_routing_logs_collector_worker_md_polaris/log-events/2024$252F09$252F21$252F[$LATEST]b8c084c4869244298c272a14b1cf9f2a"
+        },
+        "cef_details": {
+            "client": null,
+            "client_url": null,
+            "contexts": [],
+            "creation_time": null,
+            "dedup_key": "bd708806b2df4d81843d5f750a1475ee",
+            "description": "Unified Analytics Melody \u2013 Routing Worker Lambda Processing Failed",
+            "details": {
+                "Alarm Description": "A lambda processing error has occurred. This error can be caused due to failure in compressing file or failure in collating routing log forwarder lambda data or any other processing. Please follow below runbook for resolution - https://hpe.atlassian.net/wiki/spaces/HPEUCP/pages/2540013922/Unified+API+Analytics+Runbook",
+                "Alarm Name": "unifiedapi-analytics-dev-analytics_lambda_routing_logs_collector_worker_md_polaris-error-polaris",
+                "ErrorDetails": {
+                    "error_message": "Expecting ',' delimiter: line 1 column 756 (char 755)",
+                    "error_type": "JSONDecodeError"
+                },
+                "Region": "us-west-2",
+                "Request Id": "b383ab28-409c-5b82-a8a6-f44052f23aac",
+                "cloud watch log url": "https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logsV2:log-groups/log-group/$252Faws$252Flambda$252Fanalytics_lambda_routing_logs_collector_worker_md_polaris/log-events/2024$252F09$252F21$252F[$LATEST]b8c084c4869244298c272a14b1cf9f2a"
+            },
+            "event_class": null,
+            "message": "Unified Analytics Melody \u2013 Routing Worker Lambda Processing Failed",
+            "mutations": [],
+            "priority": null,
+            "reporter_component": null,
+            "reporter_location": null,
+            "service_group": null,
+            "severity": "warning",
+            "source_component": null,
+            "source_location": null,
+            "source_origin": "custom_event",
+            "urgency": null,
+            "version": "1.0"
+        },
+        "type": "alert_body"
+    },
+    "integration": {
+        "id": "PFNP1TV",
+        "type": "event_transformer_api_inbound_integration_reference",
+        "summary": "Amazon CloudWatch",
+        "self": "https://api.pagerduty.com/services/PG13E1K/integrations/PFNP1TV",
+        "html_url": "https://hpe-hcss.pagerduty.com/services/PG13E1K/integrations/PFNP1TV"
+    },
+    "privilege": null
+},
+{
+    "id": "Q02OTZBNM2JJX1",
+    "type": "alert",
+    "summary": "IAM policies should not allow full \"*\" administrative privileges",
+    "self": "https://api.pagerduty.com/alerts/Q02OTZBNM2JJX1",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q02OTZBNM2JJX1",
+    "created_at": "2024-09-20T18:16:29-06:00",
+    "status": "triggered",
+    "resolved_at": null,
+    "alert_key": "arn:aws:securityhub:us-west-2::product/aws/securityhub/arn:aws:securityhub:us-west-2:654654187307:security-control/IAM.1/finding/495c6396-d031-45c9-9781-f1508af65b2d",
+    "suppressed": false,
+    "service": {
+        "id": "P44U5QU",
+        "type": "service_reference",
+        "summary": "awssecurityhub-pioneer_previews_dev",
+        "self": "https://api.pagerduty.com/services/P44U5QU",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/P44U5QU"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q2621Q3BV420VF",
+        "type": "incident_reference",
+        "summary": "[#621640] IAM policies should not allow full \"*\" administrative privileges",
+        "self": "https://api.pagerduty.com/incidents/Q2621Q3BV420VF",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q2621Q3BV420VF"
+    },
+    "first_trigger_log_entry": {
+        "id": "RN4CN4XL5CMH43NZEIG4O4JE6N",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/RN4CN4XL5CMH43NZEIG4O4JE6N",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q02OTZBNM2JJX1/log_entries/RN4CN4XL5CMH43NZEIG4O4JE6N"
+    },
+    "body": {
+        "contexts": [
+            {
+                "type": "link",
+                "href": "https://docs.aws.amazon.com/console/securityhub/IAM.1/remediation",
+                "text": "Fix Recommendations"
+            },
+            {
+                "type": "link",
+                "href": "https://us-west-2.console.aws.amazon.com/securityhub/home?region=us-west-2#/standards/cis-aws-foundations-benchmark-1.2.0/IAM.1",
+                "text": "AWS Console"
+            }
+        ],
+        "details": {
+            "detail": {
+                "findings": [
+                    {
+                        "AwsAccountId": "654654187307",
+                        "AwsAccountName": "Pioneer Previews Dev",
+                        "CompanyName": "AWS",
+                        "Compliance": {
+                            "AssociatedStandards": [
+                                {
+                                    "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                                }
+                            ],
+                            "RelatedRequirements": [
+                                "CIS AWS Foundations Benchmark v1.2.0/1.22"
+                            ],
+                            "SecurityControlId": "IAM.1",
+                            "Status": "FAILED"
+                        },
+                        "CreatedAt": "2024-09-20T23:29:22.308Z",
+                        "Description": "This AWS control checks whether the default version of AWS Identity and Access Management (IAM) policies (also known as customer managed policies) do not have administrator access with a statement that has \"Effect\": \"Allow\" with \"Action\": \"*\" over \"Resource\": \"*\". It only checks for the Customer Managed Policies that you created, but not inline and AWS Managed Policies.",
+                        "FindingProviderFields": {
+                            "Severity": {
+                                "Label": "HIGH",
+                                "Normalized": 70,
+                                "Original": "HIGH"
+                            },
+                            "Types": [
+                                "Software and Configuration Checks/Industry and Regulatory Standards"
+                            ]
+                        },
+                        "FirstObservedAt": "2024-09-20T23:28:40.948Z",
+                        "GeneratorId": "security-control/IAM.1",
+                        "Id": "arn:aws:securityhub:us-west-2:654654187307:security-control/IAM.1/finding/495c6396-d031-45c9-9781-f1508af65b2d",
+                        "LastObservedAt": "2024-09-20T23:28:40.948Z",
+                        "ProcessedAt": "2024-09-20T23:29:37.171Z",
+                        "ProductArn": "arn:aws:securityhub:us-west-2::product/aws/securityhub",
+                        "ProductFields": {
+                            "RelatedAWSResources:0/name": "securityhub-iam-policy-no-statements-with-admin-access-2636cccb",
+                            "RelatedAWSResources:0/type": "AWS::Config::ConfigRule",
+                            "Resources:0/Id": "arn:aws:iam::654654187307:policy/api-proxy-compression-oidc-permissions-boundary",
+                            "aws/securityhub/CompanyName": "AWS",
+                            "aws/securityhub/FindingId": "arn:aws:securityhub:us-west-2::product/aws/securityhub/arn:aws:securityhub:us-west-2:654654187307:security-control/IAM.1/finding/495c6396-d031-45c9-9781-f1508af65b2d",
+                            "aws/securityhub/ProductName": "Security Hub"
+                        },
+                        "ProductName": "Security Hub",
+                        "RecordState": "ACTIVE",
+                        "Region": "us-west-2",
+                        "Remediation": {
+                            "Recommendation": {
+                                "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                                "Url": "https://docs.aws.amazon.com/console/securityhub/IAM.1/remediation"
+                            }
+                        },
+                        "Resources": [
+                            {
+                                "Details": {
+                                    "AwsIamPolicy": {
+                                        "AttachmentCount": 0,
+                                        "CreateDate": "2024-09-20T23:28:03.000Z",
+                                        "DefaultVersionId": "v1",
+                                        "IsAttachable": true,
+                                        "Path": "/",
+                                        "PermissionsBoundaryUsageCount": 0,
+                                        "PolicyId": "ANPAZQ3DOE4V35KFEW4TL",
+                                        "PolicyName": "api-proxy-compression-oidc-permissions-boundary",
+                                        "PolicyVersionList": [
+                                            {
+                                                "CreateDate": "2024-09-20T23:28:03.000Z",
+                                                "IsDefaultVersion": true,
+                                                "VersionId": "v1"
+                                            }
+                                        ],
+                                        "UpdateDate": "2024-09-20T23:28:03.000Z"
+                                    }
+                                },
+                                "Id": "arn:aws:iam::654654187307:policy/api-proxy-compression-oidc-permissions-boundary",
+                                "Partition": "aws",
+                                "Region": "us-west-2",
+                                "Type": "AwsIamPolicy"
+                            }
+                        ],
+                        "SchemaVersion": "2018-10-08",
+                        "Severity": {
+                            "Label": "HIGH",
+                            "Normalized": 70,
+                            "Original": "HIGH"
+                        },
+                        "Title": "IAM policies should not allow full \"*\" administrative privileges",
+                        "Types": [
+                            "Software and Configuration Checks/Industry and Regulatory Standards"
+                        ],
+                        "UpdatedAt": "2024-09-20T23:29:22.308Z",
+                        "Workflow": {
+                            "Status": "NEW"
+                        },
+                        "WorkflowState": "NEW"
+                    }
+                ]
+            },
+            "info": "This AWS control checks whether the default version of AWS Identity and Access Management (IAM) policies (also known as customer managed policies) do not have administrator access with a statement that has \"Effect\": \"Allow\" with \"Action\": \"*\" over \"Resource\": \"*\". It only checks for the Customer Managed Policies that you created, but not inline and AWS Managed Policies.",
+            "remediation": "https://docs.aws.amazon.com/console/securityhub/IAM.1/remediation",
+            "resource_account": "654654187307",
+            "resource_region": "us-west-2",
+            "resources": [
+                {
+                    "Details": {
+                        "AwsIamPolicy": {
+                            "AttachmentCount": 0,
+                            "CreateDate": "2024-09-20T23:28:03.000Z",
+                            "DefaultVersionId": "v1",
+                            "IsAttachable": true,
+                            "Path": "/",
+                            "PermissionsBoundaryUsageCount": 0,
+                            "PolicyId": "ANPAZQ3DOE4V35KFEW4TL",
+                            "PolicyName": "api-proxy-compression-oidc-permissions-boundary",
+                            "PolicyVersionList": [
+                                {
+                                    "CreateDate": "2024-09-20T23:28:03.000Z",
+                                    "IsDefaultVersion": true,
+                                    "VersionId": "v1"
+                                }
+                            ],
+                            "UpdateDate": "2024-09-20T23:28:03.000Z"
+                        }
+                    },
+                    "Id": "arn:aws:iam::654654187307:policy/api-proxy-compression-oidc-permissions-boundary",
+                    "Partition": "aws",
+                    "Region": "us-west-2",
+                    "Type": "AwsIamPolicy"
+                }
+            ],
+            "source": "aws.securityhub",
+            "time": "2024-09-20T23:29:38Z"
+        },
+        "cef_details": {
+            "contexts": [
+                {
+                    "href": "https://docs.aws.amazon.com/console/securityhub/IAM.1/remediation",
+                    "text": "Fix Recommendations",
+                    "type": "link"
+                },
+                {
+                    "href": "https://us-west-2.console.aws.amazon.com/securityhub/home?region=us-west-2#/standards/cis-aws-foundations-benchmark-1.2.0/IAM.1",
+                    "text": "AWS Console",
+                    "type": "link"
+                }
+            ],
+            "creation_time": "2024-09-20T23:28:40.948Z",
+            "dedup_key": "arn:aws:securityhub:us-west-2::product/aws/securityhub/arn:aws:securityhub:us-west-2:654654187307:security-control/IAM.1/finding/495c6396-d031-45c9-9781-f1508af65b2d",
+            "description": "IAM policies should not allow full \"*\" administrative privileges",
+            "details": {
+                "detail": {
+                    "findings": [
+                        {
+                            "AwsAccountId": "654654187307",
+                            "AwsAccountName": "Pioneer Previews Dev",
+                            "CompanyName": "AWS",
+                            "Compliance": {
+                                "AssociatedStandards": [
+                                    {
+                                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                                    }
+                                ],
+                                "RelatedRequirements": [
+                                    "CIS AWS Foundations Benchmark v1.2.0/1.22"
+                                ],
+                                "SecurityControlId": "IAM.1",
+                                "Status": "FAILED"
+                            },
+                            "CreatedAt": "2024-09-20T23:29:22.308Z",
+                            "Description": "This AWS control checks whether the default version of AWS Identity and Access Management (IAM) policies (also known as customer managed policies) do not have administrator access with a statement that has \"Effect\": \"Allow\" with \"Action\": \"*\" over \"Resource\": \"*\". It only checks for the Customer Managed Policies that you created, but not inline and AWS Managed Policies.",
+                            "FindingProviderFields": {
+                                "Severity": {
+                                    "Label": "HIGH",
+                                    "Normalized": 70,
+                                    "Original": "HIGH"
+                                },
+                                "Types": [
+                                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                                ]
+                            },
+                            "FirstObservedAt": "2024-09-20T23:28:40.948Z",
+                            "GeneratorId": "security-control/IAM.1",
+                            "Id": "arn:aws:securityhub:us-west-2:654654187307:security-control/IAM.1/finding/495c6396-d031-45c9-9781-f1508af65b2d",
+                            "LastObservedAt": "2024-09-20T23:28:40.948Z",
+                            "ProcessedAt": "2024-09-20T23:29:37.171Z",
+                            "ProductArn": "arn:aws:securityhub:us-west-2::product/aws/securityhub",
+                            "ProductFields": {
+                                "RelatedAWSResources:0/name": "securityhub-iam-policy-no-statements-with-admin-access-2636cccb",
+                                "RelatedAWSResources:0/type": "AWS::Config::ConfigRule",
+                                "Resources:0/Id": "arn:aws:iam::654654187307:policy/api-proxy-compression-oidc-permissions-boundary",
+                                "aws/securityhub/CompanyName": "AWS",
+                                "aws/securityhub/FindingId": "arn:aws:securityhub:us-west-2::product/aws/securityhub/arn:aws:securityhub:us-west-2:654654187307:security-control/IAM.1/finding/495c6396-d031-45c9-9781-f1508af65b2d",
+                                "aws/securityhub/ProductName": "Security Hub"
+                            },
+                            "ProductName": "Security Hub",
+                            "RecordState": "ACTIVE",
+                            "Region": "us-west-2",
+                            "Remediation": {
+                                "Recommendation": {
+                                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                                    "Url": "https://docs.aws.amazon.com/console/securityhub/IAM.1/remediation"
+                                }
+                            },
+                            "Resources": [
+                                {
+                                    "Details": {
+                                        "AwsIamPolicy": {
+                                            "AttachmentCount": 0,
+                                            "CreateDate": "2024-09-20T23:28:03.000Z",
+                                            "DefaultVersionId": "v1",
+                                            "IsAttachable": true,
+                                            "Path": "/",
+                                            "PermissionsBoundaryUsageCount": 0,
+                                            "PolicyId": "ANPAZQ3DOE4V35KFEW4TL",
+                                            "PolicyName": "api-proxy-compression-oidc-permissions-boundary",
+                                            "PolicyVersionList": [
+                                                {
+                                                    "CreateDate": "2024-09-20T23:28:03.000Z",
+                                                    "IsDefaultVersion": true,
+                                                    "VersionId": "v1"
+                                                }
+                                            ],
+                                            "UpdateDate": "2024-09-20T23:28:03.000Z"
+                                        }
+                                    },
+                                    "Id": "arn:aws:iam::654654187307:policy/api-proxy-compression-oidc-permissions-boundary",
+                                    "Partition": "aws",
+                                    "Region": "us-west-2",
+                                    "Type": "AwsIamPolicy"
+                                }
+                            ],
+                            "SchemaVersion": "2018-10-08",
+                            "Severity": {
+                                "Label": "HIGH",
+                                "Normalized": 70,
+                                "Original": "HIGH"
+                            },
+                            "Title": "IAM policies should not allow full \"*\" administrative privileges",
+                            "Types": [
+                                "Software and Configuration Checks/Industry and Regulatory Standards"
+                            ],
+                            "UpdatedAt": "2024-09-20T23:29:22.308Z",
+                            "Workflow": {
+                                "Status": "NEW"
+                            },
+                            "WorkflowState": "NEW"
+                        }
+                    ]
+                },
+                "info": "This AWS control checks whether the default version of AWS Identity and Access Management (IAM) policies (also known as customer managed policies) do not have administrator access with a statement that has \"Effect\": \"Allow\" with \"Action\": \"*\" over \"Resource\": \"*\". It only checks for the Customer Managed Policies that you created, but not inline and AWS Managed Policies.",
+                "remediation": "https://docs.aws.amazon.com/console/securityhub/IAM.1/remediation",
+                "resource_account": "654654187307",
+                "resource_region": "us-west-2",
+                "resources": [
+                    {
+                        "Details": {
+                            "AwsIamPolicy": {
+                                "AttachmentCount": 0,
+                                "CreateDate": "2024-09-20T23:28:03.000Z",
+                                "DefaultVersionId": "v1",
+                                "IsAttachable": true,
+                                "Path": "/",
+                                "PermissionsBoundaryUsageCount": 0,
+                                "PolicyId": "ANPAZQ3DOE4V35KFEW4TL",
+                                "PolicyName": "api-proxy-compression-oidc-permissions-boundary",
+                                "PolicyVersionList": [
+                                    {
+                                        "CreateDate": "2024-09-20T23:28:03.000Z",
+                                        "IsDefaultVersion": true,
+                                        "VersionId": "v1"
+                                    }
+                                ],
+                                "UpdateDate": "2024-09-20T23:28:03.000Z"
+                            }
+                        },
+                        "Id": "arn:aws:iam::654654187307:policy/api-proxy-compression-oidc-permissions-boundary",
+                        "Partition": "aws",
+                        "Region": "us-west-2",
+                        "Type": "AwsIamPolicy"
+                    }
+                ],
+                "source": "aws.securityhub",
+                "time": "2024-09-20T23:29:38Z"
+            },
+            "severity": "warning",
+            "source_origin": "arn:aws:securityhub:us-west-2::product/aws/securityhub/arn:aws:securityhub:us-west-2:654654187307:security-control/IAM.1/finding/495c6396-d031-45c9-9781-f1508af65b2d"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q02JWLYETH5IQ1",
+    "type": "alert",
+    "summary": "MLOps Site api Cron failures",
+    "self": "https://api.pagerduty.com/alerts/Q02JWLYETH5IQ1",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q02JWLYETH5IQ1",
+    "created_at": "2024-09-20T18:20:18-06:00",
+    "status": "triggered",
+    "resolved_at": null,
+    "alert_key": "f2c52a51d4cd44d39b17fb8d4c620538",
+    "suppressed": false,
+    "service": {
+        "id": "PXYFPHV",
+        "type": "service_reference",
+        "summary": "oberonlogz-mlops",
+        "self": "https://api.pagerduty.com/services/PXYFPHV",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/PXYFPHV"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q3EB1ME5WWIL29",
+        "type": "incident_reference",
+        "summary": "[#621641] MLOps Site api Cron failures",
+        "self": "https://api.pagerduty.com/incidents/Q3EB1ME5WWIL29",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q3EB1ME5WWIL29"
+    },
+    "first_trigger_log_entry": {
+        "id": "R7O0UKSOB97NLYZ2X6FBR7PPHH",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R7O0UKSOB97NLYZ2X6FBR7PPHH",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q02JWLYETH5IQ1/log_entries/R7O0UKSOB97NLYZ2X6FBR7PPHH"
+    },
+    "body": {
+        "contexts": [
+            {
+                "type": "image",
+                "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png"
+            }
+        ],
+        "details": {
+            "Description": "Failure in sites cron",
+            "Samples": "Sample 3 events out of 3:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-site-api-cron-28781290-hclx5\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"2e6f9c49-ce49-44fc-be5d-338269950f23\",\n    \"labels\" : {\n      \"controller-uid\" : \"c28aa766-03b7-45e1-9042-485c4b8669e2\",\n      \"job-name\" : \"mlops-site-api-cron-28781290\"\n    },\n    \"host\" : \"ip-192-168-132-200.us-west-2.compute.internal\",\n    \"container_name\" : \"api-cron\",\n    \"docker_id\" : \"129edaebb62e5488c2b28f7f13820af69a57c4985bc51967ed5a58682b4f1888\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops@sha256:26f714ea8347edb4af6c531ff446d0d98838ba09783380ad6f1b66cea9041a6e\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops:v0.1.67-cron\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1565344994,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:15:59.057Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96\\\",\\\"msg\\\":\\\"SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\\\\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\\\\\"\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.mlops-site-api-cron-28781290-hclx5.api-cron\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:15:59.057+00:00\",\n  \"LogSize\" : 1922,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:15:59.057Z, context=/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96, msg=SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\", requestID=, tenantID=, userID=, type=log}\"\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-site-api-cron-28781290-hclx5\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"2e6f9c49-ce49-44fc-be5d-338269950f23\",\n    \"labels\" : {\n      \"controller-uid\" : \"c28aa766-03b7-45e1-9042-485c4b8669e2\",\n      \"job-name\" : \"mlops-site-api-cron-28781290\"\n    },\n    \"host\" : \"ip-192-168-132-200.us-west-2.compute.internal\",\n    \"container_name\" : \"api-cron\",\n    \"docker_id\" : \"129edaebb62e5488c2b28f7f13820af69a57c4985bc51967ed5a58682b4f1888\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops@sha256:26f714ea8347edb4af6c531ff446d0d98838ba09783380ad6f1b66cea9041a6e\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops:v0.1.67-cron\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1565344994,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:13:58.244Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96\\\",\\\"msg\\\":\\\"SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\\\\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\\\\\"\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.mlops-site-api-cron-28781290-hclx5.api-cron\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:13:58.244+00:00\",\n  \"LogSize\" : 1922,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:13:58.244Z, context=/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96, msg=SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\", requestID=, tenantID=, userID=, type=log}\"\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-site-api-cron-28781290-hclx5\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"2e6f9c49-ce49-44fc-be5d-338269950f23\",\n    \"labels\" : {\n      \"controller-uid\" : \"c28aa766-03b7-45e1-9042-485c4b8669e2\",\n      \"job-name\" : \"mlops-site-api-cron-28781290\"\n    },\n    \"host\" : \"ip-192-168-132-200.us-west-2.compute.internal\",\n    \"container_name\" : \"api-cron\",\n    \"docker_id\" : \"129edaebb62e5488c2b28f7f13820af69a57c4985bc51967ed5a58682b4f1888\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops@sha256:26f714ea8347edb4af6c531ff446d0d98838ba09783380ad6f1b66cea9041a6e\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops:v0.1.67-cron\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1565344994,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:12:44.364Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96\\\",\\\"msg\\\":\\\"SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\\\\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\\\\\"\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.mlops-site-api-cron-28781290-hclx5.api-cron\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:12:44.364+00:00\",\n  \"LogSize\" : 1922,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:12:44.364Z, context=/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96, msg=SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\", requestID=, tenantID=, userID=, type=log}\"\n} ]",
+            "Severity": "Medium"
+        },
+        "cef_details": {
+            "client": "Logz.io Alerts",
+            "client_url": "https://app.logz.io#/dashboard/alerts/triggered?switchToAccountId=93597",
+            "contexts": [
+                {
+                    "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png",
+                    "type": "image"
+                }
+            ],
+            "dedup_key": "f2c52a51d4cd44d39b17fb8d4c620538",
+            "description": "MLOps Site api Cron failures",
+            "details": {
+                "Description": "Failure in sites cron",
+                "Samples": "Sample 3 events out of 3:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-site-api-cron-28781290-hclx5\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"2e6f9c49-ce49-44fc-be5d-338269950f23\",\n    \"labels\" : {\n      \"controller-uid\" : \"c28aa766-03b7-45e1-9042-485c4b8669e2\",\n      \"job-name\" : \"mlops-site-api-cron-28781290\"\n    },\n    \"host\" : \"ip-192-168-132-200.us-west-2.compute.internal\",\n    \"container_name\" : \"api-cron\",\n    \"docker_id\" : \"129edaebb62e5488c2b28f7f13820af69a57c4985bc51967ed5a58682b4f1888\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops@sha256:26f714ea8347edb4af6c531ff446d0d98838ba09783380ad6f1b66cea9041a6e\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops:v0.1.67-cron\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1565344994,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:15:59.057Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96\\\",\\\"msg\\\":\\\"SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\\\\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\\\\\"\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.mlops-site-api-cron-28781290-hclx5.api-cron\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:15:59.057+00:00\",\n  \"LogSize\" : 1922,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:15:59.057Z, context=/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96, msg=SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\", requestID=, tenantID=, userID=, type=log}\"\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-site-api-cron-28781290-hclx5\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"2e6f9c49-ce49-44fc-be5d-338269950f23\",\n    \"labels\" : {\n      \"controller-uid\" : \"c28aa766-03b7-45e1-9042-485c4b8669e2\",\n      \"job-name\" : \"mlops-site-api-cron-28781290\"\n    },\n    \"host\" : \"ip-192-168-132-200.us-west-2.compute.internal\",\n    \"container_name\" : \"api-cron\",\n    \"docker_id\" : \"129edaebb62e5488c2b28f7f13820af69a57c4985bc51967ed5a58682b4f1888\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops@sha256:26f714ea8347edb4af6c531ff446d0d98838ba09783380ad6f1b66cea9041a6e\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops:v0.1.67-cron\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1565344994,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:13:58.244Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96\\\",\\\"msg\\\":\\\"SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\\\\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\\\\\"\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.mlops-site-api-cron-28781290-hclx5.api-cron\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:13:58.244+00:00\",\n  \"LogSize\" : 1922,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:13:58.244Z, context=/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96, msg=SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\", requestID=, tenantID=, userID=, type=log}\"\n}, {\n  \"kubernetes\" : {\n    \"pod_name\" : \"mlops-site-api-cron-28781290-hclx5\",\n    \"namespace_name\" : \"mlops\",\n    \"pod_id\" : \"2e6f9c49-ce49-44fc-be5d-338269950f23\",\n    \"labels\" : {\n      \"controller-uid\" : \"c28aa766-03b7-45e1-9042-485c4b8669e2\",\n      \"job-name\" : \"mlops-site-api-cron-28781290\"\n    },\n    \"host\" : \"ip-192-168-132-200.us-west-2.compute.internal\",\n    \"container_name\" : \"api-cron\",\n    \"docker_id\" : \"129edaebb62e5488c2b28f7f13820af69a57c4985bc51967ed5a58682b4f1888\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops@sha256:26f714ea8347edb4af6c531ff446d0d98838ba09783380ad6f1b66cea9041a6e\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/mlops:v0.1.67-cron\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : -1565344994,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:12:44.364Z\\\",\\\"context\\\":\\\"/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96\\\",\\\"msg\\\":\\\"SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\\\\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\\\\\"\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\"}\",\n  \"fluentd_tags\" : \"mlops.mlops-site-api-cron-28781290-hclx5.api-cron\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:12:44.364+00:00\",\n  \"LogSize\" : 1922,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:12:44.364Z, context=/hpe-hcss/mlops/internal/pkg/site-api-cron/cron_service.go:96, msg=SITES API ALERT Mlops Site API Cron Failure: Error while fetching tenants from manager: Err: rpc error: code = Unavailable desc = connection error: desc = \\\"transport: Error while dialing dial tcp 10.100.247.95:8182: connect: connection refused\\\", requestID=, tenantID=, userID=, type=log}\"\n} ]",
+                "Severity": "Medium"
+            },
+            "message": "MLOps Site api Cron failures",
+            "severity": "warning"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q3Q3Y3EITFTEBB",
+    "type": "alert",
+    "summary": "[FIRING:1] vmaas-api-request-latency-high agena (neso production GET hpe-hcss monitoring/k8s /vmaas/api/v1alpha1/onboarding/edge/workflow/:id us-west-2 warning)",
+    "self": "https://api.pagerduty.com/alerts/Q3Q3Y3EITFTEBB",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q3Q3Y3EITFTEBB",
+    "created_at": "2024-09-20T18:20:29-06:00",
+    "status": "resolved",
+    "resolved_at": "2024-09-20T20:35:14-06:00",
+    "alert_key": "74c35dcf622cdb916196ce3eaf32272f0b6b1c0719f94e203848219fa5e80ab1",
+    "suppressed": false,
+    "service": {
+        "id": "P55LSIA",
+        "type": "service_reference",
+        "summary": "neso-agena",
+        "self": "https://api.pagerduty.com/services/P55LSIA",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/P55LSIA"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q37NMNVPHZT4SX",
+        "type": "incident_reference",
+        "summary": "[#621642] [FIRING:1] vmaas-api-request-latency-high agena (neso production GET hpe-hcss monitoring/k8s /vmaas/api/v1alpha1/onboarding/edge/workflow/:id us-west-2 warning)",
+        "self": "https://api.pagerduty.com/incidents/Q37NMNVPHZT4SX",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q37NMNVPHZT4SX"
+    },
+    "first_trigger_log_entry": {
+        "id": "R6JVXHMV73TX3BJUKJK9QM5VXM",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R6JVXHMV73TX3BJUKJK9QM5VXM",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q3Q3Y3EITFTEBB/log_entries/R6JVXHMV73TX3BJUKJK9QM5VXM"
+    },
+    "body": {
+        "contexts": [],
+        "details": {
+            "firing": "Labels:\n - alertname = vmaas-api-request-latency-high\n - cluster = neso\n - environment = production\n - method = GET\n - namespace = agena\n - org = hpe-hcss\n - origin_prometheus = monitoring/k8s\n - path = /vmaas/api/v1alpha1/onboarding/edge/workflow/:id\n - region = us-west-2\n - severity = warning\nAnnotations:\n - message = High latency in calls to vmaas api for period of 10 minutes consistently for 30m\n - runbook_url = https://rndwiki-pro.its.hpecorp.net/display/HCSS/VMaaS+service%28s%29+monitoring+alerts+and+run-book\nSource: https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/graph?g0.expr=%28sum+by+%28path%2C+method%2C+namespace%29+%28increase%28request_count%7Bnamespace%3D%22agena%22%2Cpath%21~%22%2Fvmaas%2Fstatus%7C%2Fvmaas%2Fsupport%2Fmetrics%22%2Cservice%3D%22agena-api-agena-api%22%7D%5B10m%5D%29%29+%3E+0%29+and+%28%28sum+by+%28path%2C+method%2C+namespace%29+%28increase%28request_total_time%7Bnamespace%3D%22agena%22%2Cpath%21~%22%2Fvmaas%2Fstatus%7C%2Fvmaas%2Fsupport%2Fmetrics%22%2Cservice%3D%22agena-api-agena-api%22%7D%5B10m%5D%29%29+%2F+sum+by+%28path%2C+method%2C+namespace%29+%28increase%28request_count%7Bnamespace%3D%22agena%22%2Cpath%21~%22%2Fvmaas%2Fstatus%7C%2Fvmaas%2Fsupport%2Fmetrics%22%2Cservice%3D%22agena-api-agena-api%22%7D%5B10m%5D%29%29%29+%2A+1000+%3E+10000%29&g0.tab=1\n",
+            "num_firing": "1",
+            "num_resolved": "0",
+            "resolved": ""
+        },
+        "cef_details": {
+            "client": "alertmanager-neso",
+            "client_url": "https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/alerts",
+            "contexts": [],
+            "dedup_key": "74c35dcf622cdb916196ce3eaf32272f0b6b1c0719f94e203848219fa5e80ab1",
+            "description": "[FIRING:1] vmaas-api-request-latency-high agena (neso production GET hpe-hcss monitoring/k8s /vmaas/api/v1alpha1/onboarding/edge/workflow/:id us-west-2 warning)",
+            "details": {
+                "firing": "Labels:\n - alertname = vmaas-api-request-latency-high\n - cluster = neso\n - environment = production\n - method = GET\n - namespace = agena\n - org = hpe-hcss\n - origin_prometheus = monitoring/k8s\n - path = /vmaas/api/v1alpha1/onboarding/edge/workflow/:id\n - region = us-west-2\n - severity = warning\nAnnotations:\n - message = High latency in calls to vmaas api for period of 10 minutes consistently for 30m\n - runbook_url = https://rndwiki-pro.its.hpecorp.net/display/HCSS/VMaaS+service%28s%29+monitoring+alerts+and+run-book\nSource: https://prometheus-k8s.neso.us-west-2.ops.hpedevops.net/graph?g0.expr=%28sum+by+%28path%2C+method%2C+namespace%29+%28increase%28request_count%7Bnamespace%3D%22agena%22%2Cpath%21~%22%2Fvmaas%2Fstatus%7C%2Fvmaas%2Fsupport%2Fmetrics%22%2Cservice%3D%22agena-api-agena-api%22%7D%5B10m%5D%29%29+%3E+0%29+and+%28%28sum+by+%28path%2C+method%2C+namespace%29+%28increase%28request_total_time%7Bnamespace%3D%22agena%22%2Cpath%21~%22%2Fvmaas%2Fstatus%7C%2Fvmaas%2Fsupport%2Fmetrics%22%2Cservice%3D%22agena-api-agena-api%22%7D%5B10m%5D%29%29+%2F+sum+by+%28path%2C+method%2C+namespace%29+%28increase%28request_count%7Bnamespace%3D%22agena%22%2Cpath%21~%22%2Fvmaas%2Fstatus%7C%2Fvmaas%2Fsupport%2Fmetrics%22%2Cservice%3D%22agena-api-agena-api%22%7D%5B10m%5D%29%29%29+%2A+1000+%3E+10000%29&g0.tab=1\n",
+                "num_firing": "1",
+                "num_resolved": "0",
+                "resolved": ""
+            },
+            "severity": "warning",
+            "source_origin": "alertmanager-neso"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q3ZDY5C2ZEY24K",
+    "type": "alert",
+    "summary": "[FIRING:2] KubeQuotaAlmostFull agena-dev (true despina kube-rbac-proxy-main monitoring/k8s us-west-2 resource-quota-agena-dev warning)",
+    "self": "https://api.pagerduty.com/alerts/Q3ZDY5C2ZEY24K",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q3ZDY5C2ZEY24K",
+    "created_at": "2024-09-20T18:21:06-06:00",
+    "status": "resolved",
+    "resolved_at": "2024-09-21T18:06:06-06:00",
+    "alert_key": "039c17d033a8e955c84d90edfafc3d55abd4e585abe0ec0388eb1d5031ee8f57",
+    "suppressed": false,
+    "service": {
+        "id": "PKPAW21",
+        "type": "service_reference",
+        "summary": "despina-agena-dev",
+        "self": "https://api.pagerduty.com/services/PKPAW21",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/PKPAW21"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q3UR9EH67IG9I0",
+        "type": "incident_reference",
+        "summary": "[#621643] [FIRING:2] KubeQuotaAlmostFull agena-dev (true despina kube-rbac-proxy-main monitoring/k8s us-west-2 resource-quota-agena-dev warning)",
+        "self": "https://api.pagerduty.com/incidents/Q3UR9EH67IG9I0",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q3UR9EH67IG9I0"
+    },
+    "first_trigger_log_entry": {
+        "id": "ROX1HY177PJQRQJGMTB6SZVD3M",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/ROX1HY177PJQRQJGMTB6SZVD3M",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q3ZDY5C2ZEY24K/log_entries/ROX1HY177PJQRQJGMTB6SZVD3M"
+    },
+    "body": {
+        "contexts": [],
+        "details": {
+            "firing": "Labels:\n - alertname = KubeQuotaAlmostFull\n - base_alert = true\n - cluster = despina\n - container = kube-rbac-proxy-main\n - namespace = agena-dev\n - origin_prometheus = monitoring/k8s\n - region = us-west-2\n - resource = limits.memory\n - resourcequota = resource-quota-agena-dev\n - severity = warning\nAnnotations:\n - description = Namespace agena-dev is using 96.88% of its limits.memory quota.\n - runbook_url = https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubequotaalmostfull\n - summary = Namespace quota is going to be full.\nSource: https://prometheus-k8s.despina.us-west-2.ops.hpedevops.net/graph?g0.expr=kube_resourcequota%7Bjob%3D%22kube-state-metrics%22%2Ctype%3D%22used%22%7D+%2F+ignoring+%28instance%2C+job%2C+type%29+%28kube_resourcequota%7Bjob%3D%22kube-state-metrics%22%2Ctype%3D%22hard%22%7D+%3E+0%29+%3E+0.9+%3C+1&g0.tab=1\nLabels:\n - alertname = KubeQuotaAlmostFull\n - base_alert = true\n - cluster = despina\n - container = kube-rbac-proxy-main\n - namespace = agena-dev\n - origin_prometheus = monitoring/k8s\n - region = us-west-2\n - resource = pods\n - resourcequota = resource-quota-agena-dev\n - severity = warning\nAnnotations:\n - description = Namespace agena-dev is using 97.5% of its pods quota.\n - runbook_url = https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubequotaalmostfull\n - summary = Namespace quota is going to be full.\nSource: https://prometheus-k8s.despina.us-west-2.ops.hpedevops.net/graph?g0.expr=kube_resourcequota%7Bjob%3D%22kube-state-metrics%22%2Ctype%3D%22used%22%7D+%2F+ignoring+%28instance%2C+job%2C+type%29+%28kube_resourcequota%7Bjob%3D%22kube-state-metrics%22%2Ctype%3D%22hard%22%7D+%3E+0%29+%3E+0.9+%3C+1&g0.tab=1\n",
+            "num_firing": "2",
+            "num_resolved": "0",
+            "resolved": ""
+        },
+        "cef_details": {
+            "client": "alertmanager-despina",
+            "client_url": "https://prometheus-k8s.despina.us-west-2.ops.hpedevops.net/alerts",
+            "contexts": [],
+            "dedup_key": "039c17d033a8e955c84d90edfafc3d55abd4e585abe0ec0388eb1d5031ee8f57",
+            "description": "[FIRING:2] KubeQuotaAlmostFull agena-dev (true despina kube-rbac-proxy-main monitoring/k8s us-west-2 resource-quota-agena-dev warning)",
+            "details": {
+                "firing": "Labels:\n - alertname = KubeQuotaAlmostFull\n - base_alert = true\n - cluster = despina\n - container = kube-rbac-proxy-main\n - namespace = agena-dev\n - origin_prometheus = monitoring/k8s\n - region = us-west-2\n - resource = limits.memory\n - resourcequota = resource-quota-agena-dev\n - severity = warning\nAnnotations:\n - description = Namespace agena-dev is using 96.88% of its limits.memory quota.\n - runbook_url = https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubequotaalmostfull\n - summary = Namespace quota is going to be full.\nSource: https://prometheus-k8s.despina.us-west-2.ops.hpedevops.net/graph?g0.expr=kube_resourcequota%7Bjob%3D%22kube-state-metrics%22%2Ctype%3D%22used%22%7D+%2F+ignoring+%28instance%2C+job%2C+type%29+%28kube_resourcequota%7Bjob%3D%22kube-state-metrics%22%2Ctype%3D%22hard%22%7D+%3E+0%29+%3E+0.9+%3C+1&g0.tab=1\nLabels:\n - alertname = KubeQuotaAlmostFull\n - base_alert = true\n - cluster = despina\n - container = kube-rbac-proxy-main\n - namespace = agena-dev\n - origin_prometheus = monitoring/k8s\n - region = us-west-2\n - resource = pods\n - resourcequota = resource-quota-agena-dev\n - severity = warning\nAnnotations:\n - description = Namespace agena-dev is using 97.5% of its pods quota.\n - runbook_url = https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubequotaalmostfull\n - summary = Namespace quota is going to be full.\nSource: https://prometheus-k8s.despina.us-west-2.ops.hpedevops.net/graph?g0.expr=kube_resourcequota%7Bjob%3D%22kube-state-metrics%22%2Ctype%3D%22used%22%7D+%2F+ignoring+%28instance%2C+job%2C+type%29+%28kube_resourcequota%7Bjob%3D%22kube-state-metrics%22%2Ctype%3D%22hard%22%7D+%3E+0%29+%3E+0.9+%3C+1&g0.tab=1\n",
+                "num_firing": "2",
+                "num_resolved": "0",
+                "resolved": ""
+            },
+            "severity": "warning",
+            "source_origin": "alertmanager-despina"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+},
+{
+    "id": "Q2AGWJVYE6RQ2C",
+    "type": "alert",
+    "summary": "PCaaS Config Manager : ArgoCDPublicURL is unreachable",
+    "self": "https://api.pagerduty.com/alerts/Q2AGWJVYE6RQ2C",
+    "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q2AGWJVYE6RQ2C",
+    "created_at": "2024-09-20T18:21:14-06:00",
+    "status": "triggered",
+    "resolved_at": null,
+    "alert_key": "4c4555edfe90470496495fadd6c00d23",
+    "suppressed": false,
+    "service": {
+        "id": "P36ESQE",
+        "type": "service_reference",
+        "summary": "oberonlogz-gateway",
+        "self": "https://api.pagerduty.com/services/P36ESQE",
+        "html_url": "https://hpe-hcss.pagerduty.com/service-directory/P36ESQE"
+    },
+    "severity": "warning",
+    "incident": {
+        "id": "Q1TVDHRL34GDWN",
+        "type": "incident_reference",
+        "summary": "[#621644] PCaaS Config Manager : ArgoCDPublicURL is unreachable",
+        "self": "https://api.pagerduty.com/incidents/Q1TVDHRL34GDWN",
+        "html_url": "https://hpe-hcss.pagerduty.com/incidents/Q1TVDHRL34GDWN"
+    },
+    "first_trigger_log_entry": {
+        "id": "R7Y69428N24UTYDLJORNAB59MH",
+        "type": "trigger_log_entry_reference",
+        "summary": "Triggered through the API.",
+        "self": "https://api.pagerduty.com/log_entries/R7Y69428N24UTYDLJORNAB59MH",
+        "html_url": "https://hpe-hcss.pagerduty.com/alerts/Q2AGWJVYE6RQ2C/log_entries/R7Y69428N24UTYDLJORNAB59MH"
+    },
+    "body": {
+        "contexts": [
+            {
+                "type": "image",
+                "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png"
+            }
+        ],
+        "details": {
+            "Description": "PCaaS Config Manager : ArgoCDPublicURL is unreachable to generate the SRE Metrics",
+            "Samples": "Sample 1 event out of 1:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"pcaas-config-manager-v2-gateway-5b59f8fd5f-5rg2k\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"155b42c0-c81a-4779-bdd2-46aa05ca89f0\",\n    \"labels\" : {\n      \"app\" : \"pcaas-config-manager-v2-gateway\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"5b59f8fd5f\",\n      \"release\" : \"pcaas-config-manager-v2\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2024-09-12T18:46:54+05:30\",\n      \"wave_pusher_com/config-hash\" : \"b1249884f7625ccbf4553157ab33ce924154092c24a3ba1a2ff193ee19a8ffb8\"\n    },\n    \"host\" : \"ip-192-168-132-200.us-west-2.compute.internal\",\n    \"container_name\" : \"pcaas-config-manager-v2\",\n    \"docker_id\" : \"16d72153594944c5c7df830ddd6aceedc3bc11c3a47a8045dc6a0895ddca0b18\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2@sha256:3cbef43608d603465f650ccfdd84acb0f3fce9e93a403d1f286803dd5ed84f18\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2:v1.1.5\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1349664815,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:17:46.578Z\\\",\\\"context\\\":\\\"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:466\\\",\\\"msg\\\":\\\"ArgoCDPublicURL is unreachable for tenant: CMEdgeHouLab2-cl5b0221grqbfd8kupl0 with Deployment ID  f0277d52-08bc-42bd-9ca5-509282112709 . Error: <nil>\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\",\\\"DED\\\":\\\"DED0000274\\\"}\",\n  \"fluentd_tags\" : \"gateway.pcaas-config-manager-v2-gateway-5b59f8fd5f-5rg2k.pcaas-config-manager-v2\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:17:46.579+00:00\",\n  \"LogSize\" : 2082,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:17:46.578Z, context=/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:466, msg=ArgoCDPublicURL is unreachable for tenant: CMEdgeHouLab2-cl5b0221grqbfd8kupl0 with Deployment ID  f0277d52-08bc-42bd-9ca5-509282112709 . Error: <nil>, requestID=, tenantID=, userID=, type=log, DED=DED0000274}\"\n} ]",
+            "Severity": "Low"
+        },
+        "cef_details": {
+            "client": "Logz.io Alerts",
+            "client_url": "https://app.logz.io#/dashboard/alerts/triggered?switchToAccountId=93597",
+            "contexts": [
+                {
+                    "src": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2015-11-19/14909590803_48.png",
+                    "type": "image"
+                }
+            ],
+            "dedup_key": "4c4555edfe90470496495fadd6c00d23",
+            "description": "PCaaS Config Manager : ArgoCDPublicURL is unreachable",
+            "details": {
+                "Description": "PCaaS Config Manager : ArgoCDPublicURL is unreachable to generate the SRE Metrics",
+                "Samples": "Sample 1 event out of 1:\n[ {\n  \"kubernetes\" : {\n    \"pod_name\" : \"pcaas-config-manager-v2-gateway-5b59f8fd5f-5rg2k\",\n    \"namespace_name\" : \"gateway\",\n    \"pod_id\" : \"155b42c0-c81a-4779-bdd2-46aa05ca89f0\",\n    \"labels\" : {\n      \"app\" : \"pcaas-config-manager-v2-gateway\",\n      \"heritage\" : \"Helm\",\n      \"pod-template-hash\" : \"5b59f8fd5f\",\n      \"release\" : \"pcaas-config-manager-v2\"\n    },\n    \"annotations\" : {\n      \"kubectl_kubernetes_io/restartedAt\" : \"2024-09-12T18:46:54+05:30\",\n      \"wave_pusher_com/config-hash\" : \"b1249884f7625ccbf4553157ab33ce924154092c24a3ba1a2ff193ee19a8ffb8\"\n    },\n    \"host\" : \"ip-192-168-132-200.us-west-2.compute.internal\",\n    \"container_name\" : \"pcaas-config-manager-v2\",\n    \"docker_id\" : \"16d72153594944c5c7df830ddd6aceedc3bc11c3a47a8045dc6a0895ddca0b18\",\n    \"container_hash\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2@sha256:3cbef43608d603465f650ccfdd84acb0f3fce9e93a403d1f286803dd5ed84f18\",\n    \"container_image\" : \"657273346644.dkr.ecr.us-east-1.amazonaws.com/hpe-hcss/pcaas-config-manager-v2:v1.1.5\"\n  },\n  \"cluster\" : \"oberon\",\n  \"logzio-signature\" : 1349664815,\n  \"type\" : \"k8s\",\n  \"message\" : \"{\\\"level\\\":\\\"error\\\",\\\"@timestamp\\\":\\\"2024-09-21T00:17:46.578Z\\\",\\\"context\\\":\\\"/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:466\\\",\\\"msg\\\":\\\"ArgoCDPublicURL is unreachable for tenant: CMEdgeHouLab2-cl5b0221grqbfd8kupl0 with Deployment ID  f0277d52-08bc-42bd-9ca5-509282112709 . Error: <nil>\\\",\\\"requestID\\\":\\\"\\\",\\\"tenantID\\\":\\\"\\\",\\\"userID\\\":\\\"\\\",\\\"type\\\":\\\"log\\\",\\\"DED\\\":\\\"DED0000274\\\"}\",\n  \"fluentd_tags\" : \"gateway.pcaas-config-manager-v2-gateway-5b59f8fd5f-5rg2k.pcaas-config-manager-v2\",\n  \"logtag\" : \"F\",\n  \"tags\" : [ \"_logz_http_bulk_json_8070\", \"logzio_field_removed\" ],\n  \"@timestamp\" : \"2024-09-21T00:17:46.579+00:00\",\n  \"LogSize\" : 2082,\n  \"stream\" : \"stderr\",\n  \"logzio_removed_fields\" : \"The following fields were removed due to conflicting types:\\nk8s -> hpe: {level=error, @timestamp=2024-09-21T00:17:46.578Z, context=/hpe-hcss/pcaas-config-manager-v2/internal/app/api/service/helper.go:466, msg=ArgoCDPublicURL is unreachable for tenant: CMEdgeHouLab2-cl5b0221grqbfd8kupl0 with Deployment ID  f0277d52-08bc-42bd-9ca5-509282112709 . Error: <nil>, requestID=, tenantID=, userID=, type=log, DED=DED0000274}\"\n} ]",
+                "Severity": "Low"
+            },
+            "message": "PCaaS Config Manager : ArgoCDPublicURL is unreachable",
+            "severity": "warning"
+        },
+        "type": "alert_body"
+    },
+    "integration": null,
+    "privilege": null
+}
+]

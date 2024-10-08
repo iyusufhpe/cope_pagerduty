@@ -2,6 +2,10 @@
 
 ```sql
 
+-- Tables in my database
+.table
+
+
 -- Find start of created_at date
 select min(created_at) from incidents;
 ┌─────────────────────┐
