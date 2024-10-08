@@ -72,9 +72,9 @@ WHERE created_at >= '2024-09-15T00:00:23' AND created_at < '2024-10-07T23:59:23'
 ```sql
 COPY (
         SELECT id
-    FROM incidents_0701_1007
-    WHERE created_at > '2024-10-01T00:00:27' AND created_at < '2024-10-07T23:49:27'
-) TO 'incidents_0701_1007_ids.csv' WITH (FORMAT CSV, HEADER FALSE);
+    FROM incidents
+    WHERE created_at > '2024-09-21T00:00:27' AND created_at < '2024-09-30T23:49:27'
+) TO 'incident_ids_0921_0930.csv' WITH (FORMAT CSV, HEADER FALSE);
 ```
 
 - Check how many incidents id we have
