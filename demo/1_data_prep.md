@@ -5,63 +5,82 @@
 - Saved data as JSON file
 
 ## Load Data to DuckDB
+- I have the following json files for incidents.
+- - ~ 450 mb in size
+incidents_2023-09-01_to_2023-12-31.json
+incidents_2024-01-01_to_2024-06-30.json
+incidents_2024-07-01_to_2024-07-31.json
+incidents_2024-08-01_to_2024-08-31.json
+incidents_2024-09-01_to_2024-09-30.json
+
+### Create a table from JSON
+```sql
+    -- Create the table and load data from the first JSON file
+    CREATE TABLE incidents_sep23sep24 AS
+    SELECT * FROM read_json_auto('incidents_2023-09-01_to_2023-12-31.json');
+
+    -- Append data from additional JSON files
+    INSERT INTO incidents_sep23sep24    SELECT * FROM read_json_auto('incidents_2024-01-01_to_2024-06-30.json');
+    INSERT INTO incidents_sep23sep24    SELECT * FROM read_json_auto('incidents_2024-07-01_to_2024-07-31.json');
+    INSERT INTO incidents_sep23sep24    SELECT * FROM read_json_auto('incidents_2024-08-01_to_2024-08-31.json');
+    INSERT INTO incidents_sep23sep24    SELECT * FROM read_json_auto('incidents_2024-09-01_to_2024-09-30.json');
+```
+
+### Get the full list of column names
 
 ```sql
+    -- Export the column names to a CSV file
+    COPY (
+        SELECT column_name
+        FROM information_schema.columns
+        WHERE table_name = 'incidents_sep23sep24'
+    ) TO 'column_names.csv' WITH (FORMAT CSV, HEADER TRUE);
+```
 
--- Select directly from reading JSON file
-select * from read_json_auto('./incidents/incidents_2024-07-01_to_2024-10-07.json');
+### Create a view as a permanent alias for the table
 
--- Create a table named incidents_0701_1007
-create table incidents_0701_1007 AS select * from read_json_auto('./incidents/incidents_2024-07-01_to_2024-10-07.json');
+```sql
+    -- Create a view as a permanent alias for the table
+    CREATE VIEW incidents AS
+    SELECT *
+    FROM incidents_sep23sep24;
+```
 
--- Investigate table structure 
-describe incidents_0701_1007;
+### Investigate some basic stats from incidents
+```sql
 
--- Count how many rows in that table
-select count(*) from incidents_0701_1007;
+    -- Count how many rows in that table
+    select count(*) from incidents;
 
-┌──────────────┐
-│ count_star() │
-│    int64     │
-├──────────────┤
-│        47058 │
-└──────────────┘
+    ┌──────────────┐
+    │ count_star() │
+    │    int64     │
+    ├──────────────┤
+    │       262820 │
+    └──────────────┘
+
 
 -- Investigate start date and end date from created_at field
-select min(created_at) from incidents_0701_1007;
+select min(created_at) from incidents;
 ┌─────────────────────┐
-│   min(created_at)   │
-│       varchar       │
-├─────────────────────┤
-│ 2024-07-01T00:08:23 │
+│ 2023-09-01T00:03:27 │
 └─────────────────────┘
 
-SELECT MAX(created_at) from incidents_0701_1007;
+SELECT MAX(created_at) from incidents;
 ┌─────────────────────┐
-│   max(created_at)   │
-│       varchar       │
-├─────────────────────┤
-│ 2024-10-07T08:55:35 │
+│ 2024-09-30T22:59:48 │
 └─────────────────────┘
 
 
 -- Total rows (incidents ?? )
 SELECT COUNT(*) 
-FROM incidents_0701_1007
-WHERE created_at >= '2024-09-15T00:00:23' AND created_at < '2024-10-07T23:59:23'
+FROM incidents
+WHERE created_at >= '2023-09-01T00:00:23' AND created_at < '2024-09-30T23:59:23'
 ;
 
 ┌──────────────┐
-│ count_star() │
-│    int64     │
-├──────────────┤
-│        13190 │
+│       262820 │
 └──────────────┘
-
-SELECT COUNT(DISTINCT(id)) 
-FROM incidents_0701_1007
-WHERE created_at >= '2024-09-15T00:00:23' AND created_at < '2024-10-07T23:59:23'
-;
 ```
 
 ## Get alerts data
