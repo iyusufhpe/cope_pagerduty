@@ -135,3 +135,5 @@ COPY (
     WHERE created_at > '2024-09-01T00:00:27' AND created_at < '2024-09-30T23:49:27'
 ) TO 'incidents_0901_0930_ids.csv' WITH (FORMAT CSV, HEADER FALSE);
 ```
+
+**Bug Fix** There was a bug in my python code. File appender was not appending.
