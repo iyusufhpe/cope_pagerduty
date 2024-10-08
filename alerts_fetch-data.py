@@ -15,8 +15,8 @@ session.verify = False
 def save_to_file_bulk(alerts_data, filename):
     try:
         with open(filename, mode='a') as file:
-            json_data = alerts_data.to_dict(orient='records')
-            json.dump(json_data, file, indent=4)
+            # Assuming alerts_data is already a list of dictionaries
+            json.dump(alerts_data, file, indent=4)
             file.write('\n')  # Add a newline after each JSON object
     except IOError as e:
         print(f"Error writing to file {filename}: {e}")
@@ -27,7 +27,7 @@ def fetch_alerts_for_incident(incident_id):
     return response
 
 def batch_download(input_incident_ids, output_alerts):
-    batch_size = 900
+    batch_size = 500  # Number of incidents to fetch alerts for before saving to file
     total_ids = len(input_incident_ids)
     all_alerts_data = []
 
@@ -50,13 +50,6 @@ def batch_download(input_incident_ids, output_alerts):
         save_to_file_bulk(all_alerts_data, output_alerts)
         print(f"Saved remaining alerts data to {output_alerts}")
 
-def save_to_file_bulk(alerts_data, filename):
-    try:
-        with open(filename, mode='w') as file:
-            json.dump(alerts_data, file, indent=4)
-    except IOError as e:
-        print(f"Error writing to file {filename}: {e}")
-
 def read_incident_ids_from_csv(csv_file_path):
     if not os.path.exists(csv_file_path):
         raise FileNotFoundError(f"The file {csv_file_path} does not exist.")
@@ -74,9 +67,12 @@ def read_incident_ids_from_csv(csv_file_path):
     return incident_ids
 
 if __name__ == '__main__':
-    # csv_input_incidents_ids = '/home/iyusuf/projects/data_pagerduty/id_incidents_test.csv' # uncomment to test
-    # print(read_incident_ids_from_csv(csv_input_incidents_ids)) # unocmment to test
-    csv_input_incidents_ids = '/home/iyusuf/projects/data_pagerduty/ids-augsep24.csv'
-    incident_alerts_json = '/home/iyusuf/projects/data_pagerduty/alerts_augsep24.json'
+
+    # csv_input_incidents_ids = './data/incidents_0701_1007_ids.csv'
+    # incident_alerts_json = './data/incidents_0701_1007_ids_alerts.json'
+    
+    csv_input_incidents_ids = './data/incidents_0401_0930_ids.csv'
+    incident_alerts_json = './data/incidents_0401_0930_ids-alerts.json'
+
     incident_ids = read_incident_ids_from_csv(csv_input_incidents_ids)
     batch_download(incident_ids, incident_alerts_json)

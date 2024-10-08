@@ -38,6 +38,11 @@ SELECT * FROM read_json_auto('incidents_2024-08-01_to_2024-08-31.json');
 
 INSERT INTO incidents_sep23sep24
 SELECT * FROM read_json_auto('incidents_2024-09-01_to_2024-09-30.json');
+
+-- doesn't work as more columns has been added to new incidents data.
+INSERT INTO incidents_sep23sep24
+SELECT * FROM read_json_auto('./data/incidents_2024-10-01_to_2024-10-07.json');
+                              
 ```
 
 ### Get the full list of column names
