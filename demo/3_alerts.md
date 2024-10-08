@@ -1,70 +1,6 @@
-# Demo DuckDB for PagerDuty
-
-## Get Incidents Data
-- Used python to download PagerDuty data from api.pagerduty.com
-- Saved data as JSON file
-
-## Load Data to DuckDB
-
-```sql
-
--- Select directly from reading JSON file
-select * from read_json_auto('./incidents/incidents_2024-07-01_to_2024-10-07.json');
-
--- Create a table named incidents_0701_1007
-create table incidents_0701_1007 AS select * from read_json_auto('./incidents/incidents_2024-07-01_to_2024-10-07.json');
-
--- Investigate table structure 
-describe incidents_0701_1007;
-
--- Count how many rows in that table
-select count(*) from incidents_0701_1007;
-
-┌──────────────┐
-│ count_star() │
-│    int64     │
-├──────────────┤
-│        47058 │
-└──────────────┘
-
--- Investigate start date and end date from created_at field
-select min(created_at) from incidents_0701_1007;
-┌─────────────────────┐
-│   min(created_at)   │
-│       varchar       │
-├─────────────────────┤
-│ 2024-07-01T00:08:23 │
-└─────────────────────┘
-
-SELECT MAX(created_at) from incidents_0701_1007;
-┌─────────────────────┐
-│   max(created_at)   │
-│       varchar       │
-├─────────────────────┤
-│ 2024-10-07T08:55:35 │
-└─────────────────────┘
-
-
--- Total rows (incidents ?? )
-SELECT COUNT(*) 
-FROM incidents_0701_1007
-WHERE created_at >= '2024-09-15T00:00:23' AND created_at < '2024-10-07T23:59:23'
-;
-
-┌──────────────┐
-│ count_star() │
-│    int64     │
-├──────────────┤
-│        13190 │
-└──────────────┘
-
-SELECT COUNT(DISTINCT(id)) 
-FROM incidents_0701_1007
-WHERE created_at >= '2024-09-15T00:00:23' AND created_at < '2024-10-07T23:59:23'
-;
-```
-
 ## Get alerts data
+
+### Generate incidents IDs
 
 - First get incidents id 
 - Save incidents id to a CSV file named incidents_id_september2024.csv
@@ -77,9 +13,12 @@ COPY (
 ) TO 'incident_ids_0921_0930.csv' WITH (FORMAT CSV, HEADER FALSE);
 ```
 
+###
+
+###
 - Check how many incidents id we have
 ```sql
-    D SELECT count(id)
+    SELECT count(id)
         FROM incidents_0701_1007
         WHERE created_at > '2024-10-01T00:00:27' AND created_at < '2024-10-07T23:49:27';
     ┌───────────┐
