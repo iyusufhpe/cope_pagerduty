@@ -102,12 +102,12 @@ if __name__ == '__main__':
     # './data/ids1.csv',
     # './data/ids2.csv'
     # './data/ids-01-24.csv',
-    './data/ids-01-24-rerun.csv',
-    './data/ids-02-24.csv'
+    # './data/ids-01-24-rerun.csv',
+    # './data/ids-02-24.csv'
     # './data/ids-03-24.csv',
     # './data/ids-04-24.csv',
     # './data/ids-05-24.csv',
-    # './data/ids-06-24.csv',
+    # './data/ids-06-24.csv'
     # './data/ids-07-24.csv',
     # './data/ids-08-24.csv',
     # './data/ids-09-24.csv'
