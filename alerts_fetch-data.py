@@ -30,7 +30,7 @@ class AlertsFetcher:
         return response
 
     def batch_download(self, input_incident_ids, output_alerts):
-        batch_size = 5  # Number of incidents to fetch alerts for before saving to file
+        batch_size = 925  # Number of incidents to fetch alerts for before saving to file
         total_ids = len(input_incident_ids)
         all_alerts_data = []
 
@@ -49,7 +49,7 @@ class AlertsFetcher:
             if (i + 1) % batch_size == 0 or (i + 1) == total_ids:
                 self.save_to_file_bulk(all_alerts_data, output_alerts, mode='a')
                 all_alerts_data = []  # Clear the list after saving to file
-                print(f"Processed batch with {i + 1} incidents, waiting for 5 seconds...")
+                print(f"Processed {i + 1} incidents, waiting for 5 seconds...")
                 time.sleep(2)
 
         # Remove the last comma and newline, then close the JSON array
@@ -69,16 +69,19 @@ class AlertsFetcher:
             print(f"Error reading from file {csv_file}: {e}")
         return incident_ids
 
-    def main(self):
-        # csv_input_incidents_ids = './data/incidents_0701_1007_ids.csv'
-        # incident_alerts_json = './data/incidents_0701_1007_ids_alerts.json'
-        
-        csv_input_incidents_ids = './data/1ids.csv'
-        incident_alerts_json = './data/1alerts.json'
-
-        incident_ids = self.read_incident_ids_from_csv(csv_input_incidents_ids)
-        self.batch_download(incident_ids, incident_alerts_json)
+    def main(self, csv_files):
+        for csv_file in csv_files:
+            incident_ids = self.read_incident_ids_from_csv(csv_file)
+            output_file = f"./data/alerts_{csv_file.split('/')[-1].replace('.csv', '.json')}"
+            self.batch_download(incident_ids, output_file)
+            print(f"Processed file {csv_file} and saved alerts to {output_file}")
 
 if __name__ == '__main__':
+    # List of CSV files to process
+    csv_files = [
+        './data/ids1.csv',
+        './data/ids2.csv'
+    ]
+
     fetcher = AlertsFetcher(api_token)
-    fetcher.main()
+    fetcher.main(csv_files)
