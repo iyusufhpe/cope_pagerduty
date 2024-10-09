@@ -9,8 +9,57 @@
 COPY (
         SELECT id
     FROM incidents
-    WHERE created_at > '2024-09-21T00:00:27' AND created_at < '2024-09-30T23:49:27'
-) TO 'incident_ids_0921_0930.csv' WITH (FORMAT CSV, HEADER FALSE);
+    WHERE created_at > '2024-09-01T00:00:27' AND created_at < '2024-09-30T23:49:27'
+) TO 'ids-09-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
+COPY (
+        SELECT id
+    FROM incidents
+    WHERE created_at > '2024-08-01T00:00:27' AND created_at < '2024-08-30T23:49:27'
+) TO 'ids-08-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
+COPY (
+        SELECT id
+    FROM incidents
+    WHERE created_at > '2024-07-01T00:00:27' AND created_at < '2024-07-30T23:49:27'
+) TO 'ids-07-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
+COPY (
+        SELECT id
+    FROM incidents
+    WHERE created_at > '2024-06-01T00:00:27' AND created_at < '2024-06-30T23:49:27'
+) TO 'ids-06-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
+COPY (
+        SELECT id
+    FROM incidents
+    WHERE created_at > '2024-05-01T00:00:27' AND created_at < '2024-05-30T23:49:27'
+) TO 'ids-05-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
+COPY (
+        SELECT id
+    FROM incidents
+    WHERE created_at > '2024-04-01T00:00:27' AND created_at < '2024-04-30T23:49:27'
+) TO 'ids-04-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
+COPY (
+        SELECT id
+    FROM incidents
+    WHERE created_at > '2024-03-01T00:00:27' AND created_at < '2024-03-30T23:49:27'
+) TO 'ids-03-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
+COPY (
+        SELECT id
+    FROM incidents
+    WHERE created_at > '2024-02-01T00:00:27' AND created_at < '2024-02-30T23:49:27'
+) TO 'ids-02-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
+COPY (
+        SELECT id
+    FROM incidents
+    WHERE created_at > '2024-01-01T00:00:27' AND created_at < '2024-01-30T23:49:27'
+) TO 'ids-01-24.csv' WITH (FORMAT CSV, HEADER FALSE);
+
 ```
 
 ###
