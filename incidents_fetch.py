@@ -25,8 +25,11 @@ import logging
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 import argparse
+import urllib3
 from token_getter import api_token
 
+# Suppress InsecureRequestWarning
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -61,6 +64,7 @@ def save_to_files(df, created_at_start, created_at_end):
     csv_filename = f'incidents_{start_date_str}_to_{end_date_str}.csv'
     df.to_json(json_filename, orient='records', indent=2)
     df.to_csv(csv_filename, index=False)
+    logging.info(f"Saved incidents to {json_filename} and {csv_filename}")
 
 def get_date_range(month=None, year=None, last_n_months=None, start_date=None, end_date=None):
     if start_date and end_date:
@@ -90,14 +94,16 @@ def main():
         start_date=args.start_date,
         end_date=args.end_date
     )
-
+    logging.info(f"Fetching incidents from {created_at_start} to {created_at_end}")
     # Initialize an empty DataFrame to store all data elements
     all_data_df = pd.DataFrame()
 
+    fetch_counter = 1
     # Initial fetch
     data = fetch_incidents(created_at_start, created_at_end)
     if data:
         all_data_df = pd.DataFrame(data['data'])
+        logging.info(f"Fetched {len(all_data_df)} incidents in fetch {fetch_counter}")
 
     # Pagination loop
     while data and data.get('more'):
@@ -106,6 +112,7 @@ def main():
         if data:
             new_data_df = pd.DataFrame(data['data'])
             all_data_df = pd.concat([all_data_df, new_data_df], ignore_index=True)
+            logging.info(f"Fetched {len(new_data_df)} incidents in fetch {fetch_counter+1}")
         
         # Delay to respect rate limit
         time.sleep(5.0)  # Adjust as needed
@@ -117,10 +124,16 @@ def main():
 
     # Save the combined DataFrame to JSON and CSV files
     save_to_files(all_data_df, created_at_start, created_at_end)
-
+    logging.info(f"Finished fetching and saving incidents for date range: {created_at_start} to {created_at_end}")
     logging.info(f"Total incidents fetched: {len(all_data_df)}")
 
 
 
+'''
+    Usage:
+    python main.py --month 1 --year 2024  # Fetch data for January 2024
+    python main.py --last_n_months 3  # Fetch data for the last three months from today
+    python main.py --start_date 04/23/2024 --end_date 04/24/2024  # Fetch data for a specific date range
+'''
 if __name__ == "__main__":
     main()
