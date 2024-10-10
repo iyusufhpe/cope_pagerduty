@@ -69,6 +69,28 @@ class AlertsFetcher:
             print(f"Error reading from file {csv_file}: {e}")
         return incident_ids
 
+
+    def time_keeper(self, csv_files):
+        start_time = time.time()
+        start_time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start_time))
+        print(f"Script started at: {start_time_str}")
+
+        self.main(csv_files)
+
+        end_time = time.time()
+        end_time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end_time))
+        print(f"Script ended at: {end_time_str}")
+        print(f"Total execution time: {end_time - start_time:.2f} seconds")
+
+        # Write start time and end time to a file
+        with open('time.txt', 'w') as time_file:
+            # TODO: Write the start and end times to a file
+            # TODO: Write api calls processed to a file
+            time_file.write(f"Script started at: {start_time_str}\n")
+            time_file.write(f"Script ended at: {end_time_str}\n")
+            time_file.write(f"Total execution time: {end_time - start_time:.2f} seconds\n")
+            
+            
     def main(self, csv_files):
         for csv_file in csv_files:
             incident_ids = self.read_incident_ids_from_csv(csv_file)
@@ -79,9 +101,19 @@ class AlertsFetcher:
 if __name__ == '__main__':
     # List of CSV files to process
     csv_files = [
-        './data/ids1.csv',
-        './data/ids2.csv'
+    # './data/ids1.csv',
+    # './data/ids2.csv'
+    # './data/ids-01-24.csv',
+    # './data/ids-01-24-rerun.csv',
+    # './data/ids-02-24.csv'
+    # './data/ids-03-24.csv',
+    # './data/ids-04-24.csv',
+    # './data/ids-05-24.csv',
+    # './data/ids-06-24.csv'
+    # './data/ids-07-24.csv',
+    # './data/ids-08-24.csv',
+    # './data/ids-09-24.csv'
     ]
 
     fetcher = AlertsFetcher(api_token)
-    fetcher.main(csv_files)
+    fetcher.time_keeper(csv_files)
