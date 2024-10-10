@@ -84,6 +84,8 @@ class AlertsFetcher:
 
         # Write start time and end time to a file
         with open('time.txt', 'w') as time_file:
+            # TODO: Write the start and end times to a file
+            # TODO: Write api calls processed to a file
             time_file.write(f"Script started at: {start_time_str}\n")
             time_file.write(f"Script ended at: {end_time_str}\n")
             time_file.write(f"Total execution time: {end_time - start_time:.2f} seconds\n")
